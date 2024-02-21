@@ -1,0 +1,34 @@
+import * as React from 'react'
+import { ProviderType } from '@mtvproject/schemas'
+import LoginModal from '@mtvproject/dapps/dist/containers/LoginModal'
+import { Props } from './WalletLoginModal.types'
+import { redirectToAuthDapp } from 'routing/locations'
+
+export default class WalletLoginModal extends React.PureComponent<Props> {
+  handleClose = () => {
+    const { onClose } = this.props
+    if (onClose) {
+      onClose()
+    }
+  }
+
+  handleConnect = (providerType: ProviderType) => {
+    this.props.onConnect(providerType)
+  }
+
+  componentDidMount(): void {
+    if (this.props.isAuthDappEnabled) {
+      redirectToAuthDapp()
+    }
+  }
+
+  componentDidUpdate(): void {
+    if (this.props.isAuthDappEnabled) {
+      redirectToAuthDapp()
+    }
+  }
+
+  render() {
+    return <LoginModal name="LoginModal" open={true} onConnect={this.handleConnect} onClose={this.handleClose} />
+  }
+}

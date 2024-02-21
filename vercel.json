@@ -1,0 +1,21 @@
+{
+  "version": 2,
+  "name": "builder",
+  "build": {
+    "env": {
+      "NODE_ENV": "development",
+      "GEN_STATIC_LOCAL": "true",
+      "VITE_BASE_URL": "/",
+      "VITE_REACT_APP_DCL_DEFAULT_ENV": "dev"
+    }
+  },
+  "routes": [
+    {
+      "handle": "filesystem"
+    },
+    {
+      "src": "/.*",
+      "dest": "/index.html"
+    }
+  ]
+}
