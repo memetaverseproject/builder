@@ -69,7 +69,7 @@ describe('when adding the world status to each ens', () => {
           healthy: true,
           configurations: {
             scenesUrn: [
-              'urn:decentraland:entity:bafkreiavjamezigndx7rq5ggwd3tg3c5hzrnvla5euukqs25ew2hs4gtte?=&baseUrl=https://worlds-content-server.decentraland.zone/contents/'
+              'urn:memetaverse:entity:bafkreiavjamezigndx7rq5ggwd3tg3c5hzrnvla5euukqs25ew2hs4gtte?=&baseUrl=https://worlds-content-server.decentraland.zone/contents/'
             ]
           }
         } as WorldInfo

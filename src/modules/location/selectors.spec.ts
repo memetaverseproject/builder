@@ -142,7 +142,7 @@ describe('when getting the selected item id using the current url', () => {
                 [collectionId]: {
                   id: collectionId,
                   isPublished: true,
-                  urn: 'urn:decentraland:mumbai:collections-v2:0xa05aa3e192efe94b8674df51a07a44f54b114069'
+                  urn: 'urn:memetaverse:mumbai:collections-v2:0xa05aa3e192efe94b8674df51a07a44f54b114069'
                 }
               }
             }
@@ -232,7 +232,7 @@ describe('when getting the selected item id using the current url', () => {
                 [collectionId]: {
                   id: collectionId,
                   isPublished: true,
-                  urn: 'urn:decentraland:matic:collections-thirdparty:some-collection-name:some-address'
+                  urn: 'urn:memetaverse:matic:collections-thirdparty:some-collection-name:some-address'
                 }
               }
             }

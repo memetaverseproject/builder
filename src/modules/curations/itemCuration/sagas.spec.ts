@@ -110,7 +110,7 @@ describe('when third party items were fetched', () => {
   beforeEach(() => {
     thirdPartyCollection = {
       id: 'aCollection',
-      urn: 'urn:decentraland:mumbai:collections-thirdparty:thirdparty2:tercer-fiesta-2'
+      urn: 'urn:memetaverse:mumbai:collections-thirdparty:thirdparty2:tercer-fiesta-2'
     } as Collection
     paginatedData = {
       limit: 1,
@@ -148,13 +148,13 @@ describe('when third party items were fetched', () => {
         {
           id: 'itemId1',
           collectionId: thirdPartyCollection.id,
-          urn: 'urn:decentraland:mumbai:collections-thirdparty:thirdparty2:tercer-fiesta-2',
+          urn: 'urn:memetaverse:mumbai:collections-thirdparty:thirdparty2:tercer-fiesta-2',
           isPublished: false
         } as Item,
         {
           id: 'itemId2',
           collectionId: thirdPartyCollection.id,
-          urn: 'urn:decentraland:mumbai:collections-thirdparty:thirdparty2:tercer-fiesta-2',
+          urn: 'urn:memetaverse:mumbai:collections-thirdparty:thirdparty2:tercer-fiesta-2',
           isPublished: true
         } as Item
       ]

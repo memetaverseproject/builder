@@ -1562,7 +1562,7 @@ describe('when handling the save item curation success action', () => {
       .put(fetchItemCurationRequest(item.collectionId!, item.id))
       .dispatch(
         saveItemSuccess(
-          { ...item, isPublished: true, urn: 'urn:decentraland:mumbai:collections-thirdparty:thirdparty2:one-third-party-collection' },
+          { ...item, isPublished: true, urn: 'urn:memetaverse:mumbai:collections-thirdparty:thirdparty2:one-third-party-collection' },
           {}
         )
       )

@@ -46,21 +46,21 @@ export function getEyeColors() {
 
 export const extraAvatarWearablesIds = {
   [BodyShape.MALE]: [
-    'urn:decentraland:off-chain:base-avatars:BaseMale',
-    'urn:decentraland:off-chain:base-avatars:eyebrows_00',
-    'urn:decentraland:off-chain:base-avatars:eyes_00',
-    'urn:decentraland:off-chain:base-avatars:sneakers',
-    'urn:decentraland:off-chain:base-avatars:brown_pants',
-    'urn:decentraland:off-chain:base-avatars:mouth_00',
-    'urn:decentraland:off-chain:base-avatars:green_hoodie'
+    'urn:memetaverse:off-chain:base-avatars:BaseMale',
+    'urn:memetaverse:off-chain:base-avatars:eyebrows_00',
+    'urn:memetaverse:off-chain:base-avatars:eyes_00',
+    'urn:memetaverse:off-chain:base-avatars:sneakers',
+    'urn:memetaverse:off-chain:base-avatars:brown_pants',
+    'urn:memetaverse:off-chain:base-avatars:mouth_00',
+    'urn:memetaverse:off-chain:base-avatars:green_hoodie'
   ],
   [BodyShape.FEMALE]: [
-    'urn:decentraland:off-chain:base-avatars:BaseFemale',
-    'urn:decentraland:off-chain:base-avatars:f_eyebrows_00',
-    'urn:decentraland:off-chain:base-avatars:f_eyes_00',
-    'urn:decentraland:off-chain:base-avatars:bun_shoes',
-    'urn:decentraland:off-chain:base-avatars:f_jeans',
-    'urn:decentraland:off-chain:base-avatars:f_mouth_00',
-    'urn:decentraland:off-chain:base-avatars:f_sweater'
+    'urn:memetaverse:off-chain:base-avatars:BaseFemale',
+    'urn:memetaverse:off-chain:base-avatars:f_eyebrows_00',
+    'urn:memetaverse:off-chain:base-avatars:f_eyes_00',
+    'urn:memetaverse:off-chain:base-avatars:bun_shoes',
+    'urn:memetaverse:off-chain:base-avatars:f_jeans',
+    'urn:memetaverse:off-chain:base-avatars:f_mouth_00',
+    'urn:memetaverse:off-chain:base-avatars:f_sweater'
   ]
 }

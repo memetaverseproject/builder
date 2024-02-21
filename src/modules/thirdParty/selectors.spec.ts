@@ -20,7 +20,7 @@ describe('Third Party selectors', () => {
   beforeEach(() => {
     address = '0xdeabeef'
     thirdParty1 = {
-      id: 'urn:decentraland:mumbai:collections-thirdparty:thirdparty1',
+      id: 'urn:memetaverse:mumbai:collections-thirdparty:thirdparty1',
       name: 'a third party',
       description: 'some desc',
       maxItems: '0',
@@ -28,7 +28,7 @@ describe('Third Party selectors', () => {
       managers: [address, '0xa']
     }
     thirdParty2 = {
-      id: 'urn:decentraland:mumbai:collections-thirdparty:thirdparty2',
+      id: 'urn:memetaverse:mumbai:collections-thirdparty:thirdparty2',
       name: 'a third party',
       description: 'some desc',
       maxItems: '0',
@@ -36,7 +36,7 @@ describe('Third Party selectors', () => {
       managers: [address, '0xb']
     }
     thirdParty3 = {
-      id: 'urn:decentraland:mumbai:collections-thirdparty:thirdparty3',
+      id: 'urn:memetaverse:mumbai:collections-thirdparty:thirdparty3',
       name: 'a third party',
       description: 'some desc',
       maxItems: '0',
@@ -137,7 +137,7 @@ describe('Third Party selectors', () => {
     describe("and the collection doesn't have a valid third party URN", () => {
       beforeEach(() => {
         collection = {
-          urn: 'urn:decentraland:goerli:collections-v2:0xbd0847050e3b92ed0e862b8a919c5dce7ce01311'
+          urn: 'urn:memetaverse:goerli:collections-v2:0xbd0847050e3b92ed0e862b8a919c5dce7ce01311'
         } as Collection
       })
 
@@ -149,7 +149,7 @@ describe('Third Party selectors', () => {
     describe('and the collection has a valid URN', () => {
       beforeEach(() => {
         collection = {
-          urn: 'urn:decentraland:mumbai:collections-thirdparty:thirdparty2:one-third-party-collection'
+          urn: 'urn:memetaverse:mumbai:collections-thirdparty:thirdparty2:one-third-party-collection'
         } as Collection
       })
 
@@ -180,7 +180,7 @@ describe('Third Party selectors', () => {
     describe("and the item doesn't have a valid third party URN", () => {
       beforeEach(() => {
         item = {
-          urn: 'urn:decentraland:goerli:collections-v2:0xbd0847050e3b92ed0e862b8a919c5dce7ce01311'
+          urn: 'urn:memetaverse:goerli:collections-v2:0xbd0847050e3b92ed0e862b8a919c5dce7ce01311'
         } as any
       })
 
@@ -204,7 +204,7 @@ describe('Third Party selectors', () => {
     describe('and the item has a valid URN', () => {
       beforeEach(() => {
         item = {
-          urn: 'urn:decentraland:mumbai:collections-thirdparty:thirdparty2:one-third-party-collection'
+          urn: 'urn:memetaverse:mumbai:collections-thirdparty:thirdparty2:one-third-party-collection'
         } as any
       })
 

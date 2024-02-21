@@ -2,7 +2,7 @@ import { getURNProtocol, Network } from '@mtvproject/schemas'
 import { getChainIdByNetwork } from '@mtvproject/dapps/dist/lib/eth'
 
 /**
- * urn:decentraland:
+ * urn:memetaverse:
  *   (
  *     (?<protocol>
  *       mainnet|
@@ -31,27 +31,24 @@ import { getChainIdByNetwork } from '@mtvproject/dapps/dist/lib/eth'
  *     )
  *   )
  */
-const baseMatcher = 'urn:decentraland'
-const protocolMatcher = '(?<protocol>mainnet|goerli|sepolia|matic|mumbai|off-chain)'
-const typeMatcher = '(?<type>base-avatars|collections-v2|collections-thirdparty|entity)'
+const baseMatcher = 'urn:memetaverse'
+const protocolMatcher = '(?<protocol>u2u|nebulas|off-chain)'
+const typeMatcher = '(?<type>base-avatars|collections|collections-thirdparty|entity)'
 
 const baseAvatarsSuffixMatcher = '((?<=base-avatars:)BaseMale|BaseFemale)'
-const collectionsSuffixMatcher = '((?<=collections-v2:)(?<collectionAddress>0x[a-fA-F0-9]{40}))(:(?<tokenId>[^:|\\s]+))?'
+const collectionsSuffixMatcher = '((?<=collections:)(?<collectionAddress>0x[a-fA-F0-9]{40}))(:(?<tokenId>[^:|\\s]+))?'
 const thirdPartySuffixMatcher =
   '((?<=collections-thirdparty:)(?<thirdPartyName>[^:|\\s]+)(:(?<thirdPartyCollectionId>[^:|\\s]+))?(:(?<thirdPartyTokenId>[^:|\\s]+))?)'
 const entitySuffixMatcher = '((?<=entity:)(?<entityId>[^\\?|\\s]+)(\\?=\\&baseUrl=(?<baseUrl>[^\\?|\\s]+))?)'
 
 export enum URNProtocol {
-  MAINNET = 'mainnet',
-  GOERLI = 'goerli',
-  SEPOLIA = 'sepolia',
-  MATIC = 'matic',
-  MUMBAI = 'mumbai',
+  NEBULAS = 'nebulas',
+  U2U = 'u2u',
   OFF_CHAIN = 'off-chain'
 }
 export enum URNType {
   BASE_AVATARS = 'base-avatars',
-  COLLECTIONS_V2 = 'collections-v2',
+  COLLECTIONS = 'collections',
   COLLECTIONS_THIRDPARTY = 'collections-thirdparty',
   ENTITY = 'entity'
 }
@@ -62,7 +59,7 @@ type BaseDecodedURN = {
   suffix: string
 }
 type BaseAvatarURN = { type: URNType.BASE_AVATARS }
-type CollectionsV2URN = { type: URNType.COLLECTIONS_V2; collectionAddress: string; tokenId?: string }
+type CollectionsV2URN = { type: URNType.COLLECTIONS; collectionAddress: string; tokenId?: string }
 type CollectionThirdPartyURN = {
   type: URNType.COLLECTIONS_THIRDPARTY
   thirdPartyName: string
@@ -73,7 +70,7 @@ type EntityURN = { type: URNType.ENTITY; entityId: string; baseUrl?: string }
 export type DecodedURN<T extends URNType = any> = BaseDecodedURN &
   (T extends URNType.BASE_AVATARS
     ? BaseAvatarURN
-    : T extends URNType.COLLECTIONS_V2
+    : T extends URNType.COLLECTIONS
     ? CollectionsV2URN
     : T extends URNType.COLLECTIONS_THIRDPARTY
     ? CollectionThirdPartyURN
@@ -82,7 +79,7 @@ export type DecodedURN<T extends URNType = any> = BaseDecodedURN &
     : BaseAvatarURN | CollectionsV2URN | CollectionThirdPartyURN | EntityURN)
 
 export function buildThirdPartyURN(thirdPartyName: string, collectionId: string, tokenId?: string) {
-  let urn = `urn:decentraland:${getNetworkURNProtocol(Network.U2U)}:collections-thirdparty:${thirdPartyName}:${collectionId}`
+  let urn = `urn:memetaverse:${getNetworkURNProtocol(Network.U2U)}:collections-thirdparty:${thirdPartyName}:${collectionId}`
   if (tokenId) {
     urn += `:${tokenId}`
   }
@@ -90,11 +87,11 @@ export function buildThirdPartyURN(thirdPartyName: string, collectionId: string,
 }
 
 export function buildCatalystItemURN(contractAddress: string, tokenId: string): URN {
-  return `urn:decentraland:${getNetworkURNProtocol(Network.U2U)}:collections:${contractAddress}:${tokenId}`
+  return `urn:memetaverse:${getNetworkURNProtocol(Network.U2U)}:collections:${contractAddress}:${tokenId}`
 }
 
 export function buildDefaultCatalystCollectionURN() {
-  return `urn:decentraland:${getNetworkURNProtocol(Network.U2U)}:collections:0x0000000000000000000000000000000000000000`
+  return `urn:memetaverse:${getNetworkURNProtocol(Network.U2U)}:collections:0x0000000000000000000000000000000000000000`
 }
 
 export function extractThirdPartyId(urn: URN): string {
@@ -103,17 +100,18 @@ export function extractThirdPartyId(urn: URN): string {
     throw new Error('URN is not a third party URN')
   }
 
-  return `urn:decentraland:${decodedURN.protocol}:collections-thirdparty:${decodedURN.thirdPartyName}`
+  return `urn:memetaverse:${decodedURN.protocol}:collections-thirdparty:`
 }
 
-export function extractThirdPartyTokenId(urn: URN) {
-  const decodedURN = decodeURN(urn)
-  if (decodedURN.type !== URNType.COLLECTIONS_THIRDPARTY) {
-    throw new Error(`Tried to build a third party token for a non third party URN "${urn}"`)
-  }
+export function extractThirdPartyTokenId(_: URN) {
+  return "";
+  // const decodedURN = decodeURN(urn)
+  // if (decodedURN.type !== URNType.COLLECTIONS_THIRDPARTY) {
+  //   throw new Error(`Tried to build a third party token for a non third party URN "${urn}"`)
+  // }
 
-  const { thirdPartyCollectionId, thirdPartyTokenId } = decodedURN
-  return `${thirdPartyCollectionId ?? ''}:${thirdPartyTokenId ?? ''}`
+  // const { thirdPartyCollectionId, thirdPartyTokenId } = decodedURN
+  // return `${thirdPartyCollectionId ?? ''}:${thirdPartyTokenId ?? ''}`
 }
 
 // TODO: This logic is repeated in collection/util's `getCollectionType`, but being used only for items (item.urn).
@@ -128,11 +126,12 @@ export function isThirdParty(urn?: string) {
 }
 
 export function extractEntityId(urn: URN): string {
-  const decodedURN = decodeURN(urn)
+  const decodedURN: any = decodeURN(urn)
   if (decodedURN.type !== URNType.ENTITY) {
     throw new Error('URN is not an entity URN')
   }
 
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-return
   return decodedURN.entityId
 }
 

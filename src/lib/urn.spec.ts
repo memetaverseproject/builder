@@ -25,7 +25,7 @@ describe('when getting the catalyst item URN', () => {
   })
 
   it('should use the supplied data to generate a valid item URN', () => {
-    expect(buildCatalystItemURN(contractAddress, tokenId)).toBe('urn:decentraland:matic:collections-v2:0x123123:token-id')
+    expect(buildCatalystItemURN(contractAddress, tokenId)).toBe('urn:memetaverse:matic:collections-v2:0x123123:token-id')
   })
 
   it('should get the chain id for the matic network', () => {
@@ -44,7 +44,7 @@ describe('when building the third party URN', () => {
 
   it('should return a valid third party collection urn', () => {
     expect(buildThirdPartyURN(thirdPartyName, collectionId)).toBe(
-      'urn:decentraland:matic:collections-thirdparty:some-tp-name:the-collection-id'
+      'urn:memetaverse:matic:collections-thirdparty:some-tp-name:the-collection-id'
     )
   })
 
@@ -58,7 +58,7 @@ describe('when building the third party URN', () => {
 
     it('should return a valid third party item urn', () => {
       expect(buildThirdPartyURN(thirdPartyName, collectionId, tokenId)).toBe(
-        'urn:decentraland:matic:collections-thirdparty:some-tp-name:the-collection-id:a-wonderful-token-id'
+        'urn:memetaverse:matic:collections-thirdparty:some-tp-name:the-collection-id:a-wonderful-token-id'
       )
     })
 
@@ -85,7 +85,7 @@ describe('when decoding an URN', () => {
 
   describe('when a valid base avatar urn is used', () => {
     it('should decode and return each group', () => {
-      expect(decodeURN('urn:decentraland:off-chain:base-avatars:BaseMale')).toEqual({
+      expect(decodeURN('urn:memetaverse:off-chain:base-avatars:BaseMale')).toEqual({
         type: URNType.BASE_AVATARS,
         protocol: URNProtocol.OFF_CHAIN,
         suffix: 'BaseMale'
@@ -96,7 +96,7 @@ describe('when decoding an URN', () => {
   describe('when a valid collection v2 urn is used', () => {
     describe('and the URN is a collection URN', () => {
       it('should decode and return each group', () => {
-        expect(decodeURN('urn:decentraland:goerli:collections-v2:0xc6d2000a7a1ddca92941f4e2b41360fe4ee2abd8')).toEqual({
+        expect(decodeURN('urn:memetaverse:goerli:collections-v2:0xc6d2000a7a1ddca92941f4e2b41360fe4ee2abd8')).toEqual({
           type: URNType.COLLECTIONS_V2,
           protocol: URNProtocol.GOERLI,
           collectionAddress: '0xc6d2000a7a1ddca92941f4e2b41360fe4ee2abd8',
@@ -107,7 +107,7 @@ describe('when decoding an URN', () => {
 
     describe('and the URN is an item URN', () => {
       it('should decode and return each group', () => {
-        expect(decodeURN('urn:decentraland:goerli:collections-v2:0xc6d2000a7a1ddca92941f4e2b41360fe4ee2abd8:tokenId')).toEqual({
+        expect(decodeURN('urn:memetaverse:goerli:collections-v2:0xc6d2000a7a1ddca92941f4e2b41360fe4ee2abd8:tokenId')).toEqual({
           type: URNType.COLLECTIONS_V2,
           protocol: URNProtocol.GOERLI,
           tokenId: 'tokenId',
@@ -119,7 +119,7 @@ describe('when decoding an URN', () => {
   })
 
   describe('when a valid third party', () => {
-    const thirdPartyRecordURN = 'urn:decentraland:matic:collections-thirdparty:crypto-motors'
+    const thirdPartyRecordURN = 'urn:memetaverse:matic:collections-thirdparty:crypto-motors'
 
     describe('when third party record urn is used', () => {
       it('should decode and return each group', () => {
@@ -164,7 +164,7 @@ describe('when decoding an URN', () => {
   describe('when a valid entity urn is used', () => {
     describe('and the URN is an entity with a baseUrl', () => {
       it('should decode and return each group', () => {
-        expect(decodeURN('urn:decentraland:entity:anEntityId?=&baseUrl=https://aContentServerUrl')).toEqual({
+        expect(decodeURN('urn:memetaverse:entity:anEntityId?=&baseUrl=https://aContentServerUrl')).toEqual({
           type: URNType.ENTITY,
           suffix: 'anEntityId?=&baseUrl=https://aContentServerUrl',
           entityId: 'anEntityId',
@@ -175,7 +175,7 @@ describe('when decoding an URN', () => {
 
     describe('and the URN is only an entity', () => {
       it('should decode and return each group', () => {
-        expect(decodeURN('urn:decentraland:entity:anEntityId')).toEqual({
+        expect(decodeURN('urn:memetaverse:entity:anEntityId')).toEqual({
           type: URNType.ENTITY,
           suffix: 'anEntityId',
           entityId: 'anEntityId'
@@ -189,16 +189,16 @@ describe('when extracting the third party item token id from an URN', () => {
   describe('when the URN is not a valid third party URN', () => {
     it("should throw an error signaling that the URN doesn't belong to a third party", () => {
       expect(() =>
-        extractThirdPartyTokenId('urn:decentraland:goerli:collections-v2:0xc6d2000a7a1ddca92941f4e2b41360fe4ee2abd8')
+        extractThirdPartyTokenId('urn:memetaverse:goerli:collections-v2:0xc6d2000a7a1ddca92941f4e2b41360fe4ee2abd8')
       ).toThrowError(
-        'Tried to build a third party token for a non third party URN "urn:decentraland:goerli:collections-v2:0xc6d2000a7a1ddca92941f4e2b41360fe4ee2abd8"'
+        'Tried to build a third party token for a non third party URN "urn:memetaverse:goerli:collections-v2:0xc6d2000a7a1ddca92941f4e2b41360fe4ee2abd8"'
       )
     })
   })
 
   describe('when the URN is a valid third party URN', () => {
     it('should extract the collection and token ids', () => {
-      expect(extractThirdPartyTokenId('urn:decentraland:mumbai:collections-thirdparty:thirdparty2:collection-id:token-id')).toBe(
+      expect(extractThirdPartyTokenId('urn:memetaverse:mumbai:collections-thirdparty:thirdparty2:collection-id:token-id')).toBe(
         'collection-id:token-id'
       )
     })
@@ -257,7 +257,7 @@ describe('when checking if a collection is a third party', () => {
 describe('when extracting the entity id from an URN', () => {
   describe('when the URN is not an entity URN', () => {
     it("should throw an error signaling that the URN doesn't belong to an entity", () => {
-      expect(() => extractEntityId('urn:decentraland:goerli:collections-v2:0xc6d2000a7a1ddca92941f4e2b41360fe4ee2abd8')).toThrowError(
+      expect(() => extractEntityId('urn:memetaverse:goerli:collections-v2:0xc6d2000a7a1ddca92941f4e2b41360fe4ee2abd8')).toThrowError(
         'URN is not an entity URN'
       )
     })
@@ -265,7 +265,7 @@ describe('when extracting the entity id from an URN', () => {
 
   describe('when the URN is an entity URN', () => {
     it('should extract the entity id', () => {
-      expect(extractEntityId('urn:decentraland:entity:anEntityId')).toBe('anEntityId')
+      expect(extractEntityId('urn:memetaverse:entity:anEntityId')).toBe('anEntityId')
     })
   })
 })

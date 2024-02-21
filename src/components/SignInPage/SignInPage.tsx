@@ -9,6 +9,7 @@ import { Props } from './SignInPage.types'
 
 export default class SignInPage extends React.PureComponent<Props> {
   handleOnConnect = (providerType: ProviderType) => {
+    console.log(providerType)
     this.props.onConnect(providerType)
   }
 
@@ -21,13 +22,12 @@ export default class SignInPage extends React.PureComponent<Props> {
   }
 
   render() {
-    const { isConnected, isAuthDappEnabled } = this.props
+    const { isConnected } = this.props
     return (
       <>
         <Navbar />
         <Page>
           <SignIn
-            onConnect={isAuthDappEnabled ? this.handleRedirectToAuthDapp : undefined}
             isConnected={isConnected}
             handleLoginConnect={this.handleOnConnect}
           />

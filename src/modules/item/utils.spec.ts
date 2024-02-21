@@ -29,7 +29,7 @@ describe('when transforming third party items to be sent to a contract method', 
           category: WearableCategory.EARRING,
           representations: [{ bodyShapes: [BodyShape.MALE] }]
         },
-        urn: 'urn:decentraland:mumbai:collections-thirdparty:thirdparty2:collection-id1:token-id2',
+        urn: 'urn:memetaverse:mumbai:collections-thirdparty:thirdparty2:collection-id1:token-id2',
         contents: {}
       },
       {
@@ -41,7 +41,7 @@ describe('when transforming third party items to be sent to a contract method', 
           category: WearableCategory.EYEBROWS,
           representations: [{ bodyShapes: [BodyShape.MALE, BodyShape.FEMALE] }]
         },
-        urn: 'urn:decentraland:mumbai:collections-thirdparty:thirdparty2:collection-id2:token-idb',
+        urn: 'urn:memetaverse:mumbai:collections-thirdparty:thirdparty2:collection-id2:token-idb',
         contents: {}
       },
       {
@@ -53,7 +53,7 @@ describe('when transforming third party items to be sent to a contract method', 
           category: WearableCategory.FEET,
           representations: [{ bodyShapes: [BodyShape.FEMALE] }]
         },
-        urn: 'urn:decentraland:mumbai:collections-thirdparty:thirdparty2:collection-id1:token-id1',
+        urn: 'urn:memetaverse:mumbai:collections-thirdparty:thirdparty2:collection-id1:token-id1',
         contents: {}
       }
     ] as Item[]

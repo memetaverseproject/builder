@@ -626,7 +626,7 @@ export class BuilderAPI extends BaseAPI {
     const request = async (path: string) => fetch(this.url + path, { headers: await this.authorization.createAuthHeaders('get', path) })
     const about: { configurations: { scenesUrn: string[] } } = await request(`/projects/${projectId}/about`).then(resp => resp.json())
     const urn = about.configurations.scenesUrn[0]
-    const hash = urn.split('urn:decentraland:entity:').pop()!.split('?')[0]
+    const hash = urn.split('urn:memetaverse:entity:').pop()!.split('?')[0]
     const entity: Entity = await request(`/projects/${projectId}/contents/${hash}`).then(resp => resp.json())
     const main = entity.content.find(content => content.file === 'bin/index.js')!
     const file: string = await request(`/projects/${projectId}/contents/${main.hash}`).then(resp => resp.text())

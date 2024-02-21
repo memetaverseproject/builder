@@ -97,7 +97,7 @@ const getTPCollectionMock = (props: Partial<Collection> = {}): Collection =>
     id: 'aCollection',
     isPublished: true,
     isApproved: false,
-    urn: 'urn:decentraland:mumbai:collections-thirdparty:thirdparty2:one-third-party-collection',
+    urn: 'urn:memetaverse:mumbai:collections-thirdparty:thirdparty2:one-third-party-collection',
     ...props
   } as Collection)
 
@@ -128,14 +128,14 @@ const getEntityMock = (item: Item, props: Partial<Entity> = {}): Entity => ({
   id: 'anEntity',
   content: Object.keys(item.contents).map(file => ({ file, hash: item.contents[file] })),
   metadata: {
-    urn: 'urn:decentraland:collections-v2:aCollection:anItem',
+    urn: 'urn:memetaverse:collections-v2:aCollection:anItem',
     name: item.name,
     description: item.description,
     data: item.data
   },
   timestamp: 0,
   type: EntityType.WEARABLE,
-  pointers: ['urn:decentraland:collections-v2:aCollection:anItem'],
+  pointers: ['urn:memetaverse:collections-v2:aCollection:anItem'],
   version: 'v3',
   ...props
 })
@@ -1241,7 +1241,7 @@ describe('when saving a collection', () => {
     beforeEach(() => {
       thirdPartyCollection = {
         name: 'some name',
-        urn: 'urn:decentraland:mumbai:collections-thirdparty:thirdparty2:tercer-fiesta-2'
+        urn: 'urn:memetaverse:mumbai:collections-thirdparty:thirdparty2:tercer-fiesta-2'
       } as Collection
       remoteCollection = {
         contractAddress: '0xdeadbeef'

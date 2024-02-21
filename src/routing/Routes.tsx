@@ -5,7 +5,6 @@ import { t } from '@mtvproject/dapps/dist/modules/translation/utils'
 
 import { locations } from 'routing/locations'
 
-import Intercom from 'components/Intercom'
 import Footer from 'components/Footer'
 import Navbar from 'components/Navbar'
 import ErrorPage from 'components/ErrorPage'
@@ -138,15 +137,10 @@ export default class Routes extends React.Component<Props, State> {
     )
   }
 
-  renderIntercom() {
-    return <Intercom />
-  }
-
   render() {
     return (
       <>
         {this.renderRoutes()}
-        {this.renderIntercom()}
       </>
     )
   }

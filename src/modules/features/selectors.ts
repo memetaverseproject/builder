@@ -46,12 +46,8 @@ export const getIsCreateSceneOnlySDK7Enabled = (state: RootState) => {
   }
 }
 
-export const getIsAuthDappEnabled = (state: RootState) => {
-  try {
-    return getIsFeatureEnabled(state, ApplicationName.DAPPS, FeatureName.AUTH_DAPP)
-  } catch (e) {
-    return false
-  }
+export const getIsAuthDappEnabled = (_: RootState) => {
+  return false;
 }
 
 export const getIsEnsAddressEnabled = (state: RootState) => {

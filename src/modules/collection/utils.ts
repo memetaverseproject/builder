@@ -84,7 +84,7 @@ export function getCollectionType(collection: Collection): CollectionType {
   switch (type) {
     case URNType.COLLECTIONS_THIRDPARTY:
       return CollectionType.THIRD_PARTY
-    case URNType.COLLECTIONS_V2:
+    case URNType.COLLECTIONS:
     case URNType.BASE_AVATARS:
       return CollectionType.STANDARD
     default:

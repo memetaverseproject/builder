@@ -167,7 +167,7 @@ describe('when getting status by item id', () => {
               }
             ],
             metadata: {
-              id: 'urn:decentraland:matic:collections-v2:anAddress:aTokenId',
+              id: 'urn:memetaverse:matic:collections-v2:anAddress:aTokenId',
               name: 'pepito',
               description: 'yes it is a pepito',
               data: {
@@ -187,7 +187,7 @@ describe('when getting status by item id', () => {
               }
             ],
             metadata: {
-              id: 'urn:decentraland:matic:collections-v2:anAddress:anotherTokenId',
+              id: 'urn:memetaverse:matic:collections-v2:anAddress:anotherTokenId',
               name: 'pepito',
               description: 'pepito hat very nice',
               data: {
@@ -217,7 +217,7 @@ describe('when getting the authorized collections', () => {
 
   beforeEach(() => {
     collections = []
-    thirdPartyId = 'urn:decentraland:goerli:collections-thirdparty:third-party-1'
+    thirdPartyId = 'urn:memetaverse:goerli:collections-thirdparty:third-party-1'
     address = '0x0'
     thirdParties = {
       [thirdPartyId]: {
@@ -285,7 +285,7 @@ describe('when getting the authorized collections', () => {
         id: 'anId',
         name: 'aName',
         owner: '',
-        urn: 'urn:decentraland:goerli:collections-v2:0xcf0119336c76f513b5652f551c7c4a75457efec5',
+        urn: 'urn:memetaverse:goerli:collections-v2:0xcf0119336c76f513b5652f551c7c4a75457efec5',
         isPublished: false,
         isApproved: false,
         minters: [],
@@ -344,7 +344,7 @@ describe('when getting if the user has view or edit rights over a collection', (
   let state: RootState
   let address: string
   let collection: Collection
-  const thirdPartyId = 'urn:decentraland:matic:collections-thirdparty:some-tp-name'
+  const thirdPartyId = 'urn:memetaverse:matic:collections-thirdparty:some-tp-name'
 
   beforeEach(() => {
     address = '0x0'
@@ -376,7 +376,7 @@ describe('when getting if the user has view or edit rights over a collection', (
     beforeEach(() => {
       address = 'anotherAddress'
       collection = {
-        urn: 'urn:decentraland:goerli:collections-v2:0xc6d2000a7a1ddca92941f4e2b41360fe4ee2abd8',
+        urn: 'urn:memetaverse:goerli:collections-v2:0xc6d2000a7a1ddca92941f4e2b41360fe4ee2abd8',
         managers: ['aManager']
       } as Collection
     })
