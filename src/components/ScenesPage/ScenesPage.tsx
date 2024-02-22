@@ -2,19 +2,7 @@ import React, { useCallback, useEffect } from 'react'
 import classNames from 'classnames'
 import { Link } from 'react-router-dom'
 import { t } from '@mtvproject/dapps/dist/modules/translation/utils'
-import {
-  Container,
-  Button,
-  Dropdown,
-  DropdownProps,
-  Pagination,
-  PaginationProps,
-  Row,
-  Header,
-  Icon,
-  Section,
-  Column
-} from '@mtvproject/ui'
+import { Container, Button, Dropdown, DropdownProps, Pagination, PaginationProps, Row, Header, Icon, Section, Column } from '@mtvproject/ui'
 
 import ProjectCard from 'components/ProjectCard'
 import LoggedInDetailPage from 'components/LoggedInDetailPage'

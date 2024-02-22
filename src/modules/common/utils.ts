@@ -26,12 +26,7 @@ export const takeLatestCancellable = <A extends Action>(
 // This is a temporary util fn to get a node with no Garbage collector so we can deploy profiles directly to a node
 export const getPeerWithNoGBCollectorURL = () => {
   const environment = config.get('ENVIRONMENT')
-  const urls =
-    environment === 'production'
-      ? [
-          
-        ]
-      : []
+  const urls = environment === 'production' ? [] : []
 
   return urls[Math.floor(Math.random() * urls.length)]
 }

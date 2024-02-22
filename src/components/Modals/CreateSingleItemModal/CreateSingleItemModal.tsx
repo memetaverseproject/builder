@@ -18,7 +18,6 @@ import {
   WearablePreview
 } from '@mtvproject/ui'
 
-
 import { t } from '@mtvproject/dapps/dist/modules/translation/utils'
 import Modal from '@mtvproject/dapps/dist/containers/Modal'
 import { isErrorWithMessage } from '@mtvproject/dapps/dist/lib/error'

@@ -219,14 +219,7 @@ export default function DeployToWorld({
           <Button primary className={styles.modalBodyStateActionButton} onClick={handleClaimName}>
             {t('deployment_modal.deploy_world.claim_name')}
           </Button>
-          <Button
-            secondary
-            className={styles.modalBodyStateActionButton}
-            as="a"
-            href="#"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
+          <Button secondary className={styles.modalBodyStateActionButton} as="a" href="#" rel="noopener noreferrer" target="_blank">
             {t('global.learn_more')}
           </Button>
         </div>
