@@ -368,7 +368,7 @@ export default class ItemDetailPage extends React.PureComponent<Props, State> {
                       inverted
                       className="learn-more-permissions"
                       size="small"
-                      href="https://docs.decentraland.org/creator/development-guide/sdk7/scene-metadata/#required-permissions"
+                      href="https://docs.memetaverse.club/creator/development-guide/sdk7/scene-metadata/#required-permissions"
                       rel="noopener noreferrer"
                       target="_blank"
                       content={t('global.learn_more')}

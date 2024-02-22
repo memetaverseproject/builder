@@ -35,7 +35,7 @@ export default class ExportModal extends React.PureComponent<Props> {
             {action}
             {isLoading && <Loader active size="tiny" inline className="export-modal-loader" />}
           </Button>
-          <Button as="a" secondary href="https://developers.decentraland.org" rel="noopener noreferrer" target="_blank">
+          <Button as="a" secondary href="https://developers.memetaverse.club" rel="noopener noreferrer" target="_blank">
             {t('export_modal.docs')}
           </Button>
         </Modal.Actions>

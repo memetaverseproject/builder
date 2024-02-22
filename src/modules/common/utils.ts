@@ -29,16 +29,9 @@ export const getPeerWithNoGBCollectorURL = () => {
   const urls =
     environment === 'production'
       ? [
-          'peer-ec2.decentraland.org',
-          'peer-wc1.decentraland.org',
-          'peer-eu1.decentraland.org',
-          'peer-ec1.decentraland.org',
-          'interconnected.online',
-          'peer.decentral.io',
-          'peer.kyllian.me',
-          'peer.uadevops.com'
+          
         ]
-      : ['peer.decentraland.zone', 'peer-ue-2.decentraland.zone', 'peer-ap1.decentraland.zone']
+      : []
 
   return urls[Math.floor(Math.random() * urls.length)]
 }

@@ -126,7 +126,7 @@
     "title_create": "Create Asset Pack"
   },
   "banners": {
-    "promo_subtitle": "Custom Asset Packs now available in Decentraland!",
+    "promo_subtitle": "Custom Asset Packs now available in Memetaverse!",
     "promo_title": "Personalise your world",
     "top_banner_action": "Learn more.",
     "top_banner_left": "September 16-30 - Intense online creation with over $250k USD in prizes to share.",
@@ -196,7 +196,7 @@
   "claim_ens_page": {
     "title": "Claim a unique Name",
     "subtitle": "Unique names can be assigned to your avatar for use as an alias, or they can be assigned to parcels.{br} Assigning a name to a parcel or estate allows you to create a unique URL, like {exampleLink}, making it easy to send people to your LAND. When someone follows your new URL, they will be redirected to your LAND in {dclWorldLink}{br} Names are only available in Ethereum, and can only be claimed with Ethereum MANA {symbol}",
-    "world": "Decentraland!",
+    "world": "Memetaverse!",
     "name_label": "Name",
     "name_message": "Names may not exceed 15 characters, contain spaces, or include any non-alphanumeric characters.",
     "name_placeholder": "Your name goes here",
@@ -338,8 +338,8 @@
     "copy": "copy link",
     "copied": "copied",
     "uri": {
-      "facebook": "https://www.facebook.com/sharer/sharer.php?u={url}&description=Introducing my latest creation, now live in Decentraland! View it below and then help me build the Metaverse by adding one of your own.",
-      "twitter": "https://twitter.com/intent/tweet?text=Just added a new design to Decentraland via the Builder. Check it out below then create your own. The virtual world’s not gonna build itself you know! {url}&hashtags=builder,virtualworld,gaming"
+      "facebook": "https://www.facebook.com/sharer/sharer.php?u={url}&description=Introducing my latest creation, now live in Memetaverse! View it below and then help me build the Metaverse by adding one of your own.",
+      "twitter": "https://twitter.com/intent/tweet?text=Just added a new design to Memetaverse via the Builder. Check it out below then create your own. The virtual world’s not gonna build itself you know! {url}&hashtags=builder,virtualworld,gaming"
     }
   },
   "deployment_status": {
@@ -447,7 +447,7 @@
     "pool": {
       "action": "Submit",
       "contact_information": "Contact information",
-      "i_accept_the": "By clicking \"submit\" you agree to receive news from Decentraland",
+      "i_accept_the": "By clicking \"submit\" you agree to receive news from Memetaverse",
       "progress": "Processing",
       "sign_in": {
         "action": "Sign In",
@@ -464,7 +464,7 @@
     },
     "deploy_world": {
       "title": "Publish to World",
-      "description": "Select the Decentraland NAME or ENS Domain that will define the URL",
+      "description": "Select the Memetaverse NAME or ENS Domain that will define the URL",
       "action": "Publish",
       "world_label": "World (NAME)",
       "world_placeholder": "Select a NAME",
@@ -530,7 +530,7 @@
   },
   "smart_wearables_announcement_modal": {
     "title": "Smart Wearables are now live! 🟢",
-    "description": "<b>Take Wearables to the next level with Portable Experiences</b><br></br>Monetize your Portable Experiences through Smart Wearables and expand the usability of Wearables by offering players new abilities (like flying!) or an extra layer of content overlaid on Decentraland scenes.",
+    "description": "<b>Take Wearables to the next level with Portable Experiences</b><br></br>Monetize your Portable Experiences through Smart Wearables and expand the usability of Wearables by offering players new abilities (like flying!) or an extra layer of content overlaid on Memetaverse scenes.",
     "learn_more": "Learn more about Smart Wearables"
   },
   "emotes_v2_announcement_modal": {
@@ -632,7 +632,7 @@
     "point_location": "Assign to Location",
     "tooltips": {
       "alias": "You can only assign one NAME per avatar",
-      "address": "Use your Decentraland NAME across Web3 thanks to a partnership with ENS.",
+      "address": "Use your Memetaverse NAME across Web3 thanks to a partnership with ENS.",
       "land": "When you assign a LAND parcel or estate a NAME it can be easily navigated to with a dedicated URL (e.g. https://name.dcl.eth)."
     },
     "unclaimed": "Unclaimed",
@@ -642,7 +642,7 @@
   },
   "ens_map_address_modal": {
     "title": "Assigned Address",
-    "description": "Enable others to reference your account by assigning an Ethereum address to your Decentraland NAME. This allows you to receive assets simply by providing your NAME.",
+    "description": "Enable others to reference your account by assigning an Ethereum address to your Memetaverse NAME. This allows you to receive assets simply by providing your NAME.",
     "address": {
       "label": "Linked Ethereum Address",
       "placeholder": "Address"
@@ -654,7 +654,7 @@
     "save": "Save",
     "set_resolver": {
       "title": "Grant Permission",
-      "info": "Enable others to reference your account by defining an Ethereum address with your Decentraland NAME.<br></br> <br></br>This allows you to receive assets simply by providing your NAME. Authorize the public ENS resolver to set the address record on your behalf in Decentraland.",
+      "info": "Enable others to reference your account by defining an Ethereum address with your Memetaverse NAME.<br></br> <br></br>This allows you to receive assets simply by providing your NAME. Authorize the public ENS resolver to set the address record on your behalf in Memetaverse.",
       "action": "Authorize",
       "error": "Something went wrong, please try again."
     },
@@ -690,11 +690,11 @@
       "description": "Each NAME grants you access to one World, <b>your own 3D space in the metaverse</b> where you can shape the space however you like and invite up to 100 people to visit.",
       "cta": "Claim Name",
       "title_ens": "Get a free World when you own a ENS Domain",
-      "description_ens": "With an ENS Domain, you can create a unique World with 25 Mb of dedicated storage. It's a great way to start your journey in Decentraland.",
+      "description_ens": "With an ENS Domain, you can create a unique World with 25 Mb of dedicated storage. It's a great way to start your journey in Memetaverse.",
       "cta_ens": "Claim ENS Domain"
     },
     "name_tabs": {
-      "dcl_names": "Decentraland NAMEs",
+      "dcl_names": "Memetaverse NAMEs",
       "ens_names": "ENS Domains"
     },
     "worlds_storage": {
@@ -730,7 +730,7 @@
   },
   "export_modal": {
     "action": "Download scene",
-    "docs": "What is the Decentraland SDK?",
+    "docs": "What is the Memetaverse SDK?",
     "description": "Transition seamlessly from the Builder to the SDK for a more interactive and personalized scene. Keep in mind that you have the option to download scenes from the scene pool and templates and upload it across different accounts.",
     "loading": "Downloading...",
     "title": "Download scenes and create with a higher level of complexity."
@@ -777,7 +777,7 @@
     "reload": "Reload",
     "save": "Save",
     "send": "Send",
-    "see_in_decentraland": "See in Decentraland",
+    "see_in_memetaverse": "See in Memetaverse",
     "share": "Share",
     "sign_in_required": "You need to {link} to access this page.",
     "sign_in": "Sign in",
@@ -979,8 +979,8 @@
     "gallery_title": "Check out work from Builder users!",
     "learn_more": "Learn more about the Builder",
     "message": "The Builder is only available on desktop right now. Sign up to receive updates and check it out on your computer.",
-    "reminder_body": "Hey there!\n\nWhoops! It looks like you tried to use the Builder from a mobile device!\nThe Builder only runs on desktop and laptop computers. Grab your nearest computer, and try again at https://builder.decentraland.org\n\nHappy building!\n\nThe Decentraland Team",
-    "reminder_subject": "Reminder: Try out Decentraland's Builder",
+    "reminder_body": "Hey there!\n\nWhoops! It looks like you tried to use the Builder from a mobile device!\nThe Builder only runs on desktop and laptop computers. Grab your nearest computer, and try again at https://builder.Memetaverse.org\n\nHappy building!\n\nThe Memetaverse Team",
+    "reminder_subject": "Reminder: Try out Memetaverse's Builder",
     "secondary_hero": {
       "action": "Send yourself a reminder",
       "title": "Want to build something when you get to your computer?"
@@ -1074,7 +1074,7 @@
     "set_resolver": "Set Resolver",
     "set_resolver_explanation": "This allows your name to be linked to a land.",
     "set_content": "Set Content",
-    "set_content_explanation": "This resolves your name with a link to your land in Decentraland."
+    "set_content_explanation": "This resolves your name with a link to your land in Memetaverse."
   },
   "ens_select_land_page": {
     "title": "Use {name} as a link",
@@ -1234,14 +1234,14 @@
     "title": "Create a Scene",
     "name_subtitle": "Set a name and a description for your scene",
     "size_subtitle": "Set the parcels size of your new scene",
-    "sdk_title": "Experience the new Decentraland Web Editor",
+    "sdk_title": "Experience the new Memetaverse Web Editor",
     "sdk_subtitle": "Harness the power of SDK 7 without any code.",
     "sdk_description": "Enhance your scene-building process with our improved visual editor. All features from the previous Scene Builder are included, while the addition of <b>Smart Items</b> is scheduled for an upcoming update.",
     "sdk_image_alt": "SDK 7",
     "name_label": "Name",
     "description_label": "Description",
     "description_placeholder": "Some description...",
-    "use_sdk7": "Use decentraland web editor",
+    "use_sdk7": "Use Memetaverse web editor",
     "use_sdk6": "Use legacy scene builder (SDK 6)"
   },
   "clone_template_modal": {
@@ -1332,7 +1332,7 @@
   },
   "tutorial_modal": {
     "slide0": {
-      "description": "This is Decentraland’s new Scene builder. Before you get started, let us show you around.",
+      "description": "This is Memetaverse’s new Scene builder. Before you get started, let us show you around.",
       "title": "Welcome to the Builder!"
     },
     "slide1": {
@@ -1531,8 +1531,8 @@
     "mint_items": "Mint Items",
     "on_sale": "On Sale",
     "put_for_sale": "Put up for sale",
-    "set_on_sale_popup": "This will allow your collection to be sold in the Decentraland Marketplace.",
-    "unset_on_sale_popup": "This collection is on sale in the Decentraland Marketplace.",
+    "set_on_sale_popup": "This will allow your collection to be sold in the Memetaverse Marketplace.",
+    "unset_on_sale_popup": "This collection is on sale in the Memetaverse Marketplace.",
     "notice": "Cool! Now you can start working on your items. {editor_link} to open the editor or click the edit button on any item.",
     "preview": "Preview in Editor",
     "publish": "Publish Collection",
@@ -1577,7 +1577,7 @@
     "edit_urn": "Edit URN",
     "edit_in_bulk": "Edit in bulk",
     "copy_urn": "Copy URN",
-    "see_in_decentraland": "See in Decentraland",
+    "see_in_memetaverse": "See in Memetaverse",
     "unpublished": "This collection is not published yet",
     "managers": "Collaborators",
     "minters": "Minters",
@@ -1653,7 +1653,7 @@
     "second_paragraph": "You will not be able to add or delete items after you publish your collection.",
     "third_paragraph": "You won’t be able to change the name of the collection. Please ensure it’s spelled correctly and doesn’t violate intellectual property rights.",
     "fourth_paragraph": "You will be able to see your items in the marketplace but they will be available for sale once the collection is validated by the DAO.",
-    "items_breakdown_title": "You are about to publish {count} {count, plural, one {item} other {items}}. The MANA fee for each collection goes to the Decentraland DAO, where it is used to support the growth of the community through grants, events, and prizes.",
+    "items_breakdown_title": "You are about to publish {count} {count, plural, one {item} other {items}}. The MANA fee for each collection goes to the Memetaverse DAO, where it is used to support the growth of the community through grants, events, and prizes.",
     "tos_title": "I hereby represent and warrant that:",
     "tos_first_condition": "1: The submitted Wearable/s is in full compliance with the {terms_of_use} and {content_policy}, which I acknowledge and accept.",
     "tos_second_condition": "2: I have sufficient Intellectual Property Rights over the submitted Wearable/s.",
@@ -1724,7 +1724,7 @@
       "acknowledge_dao_terms": "I acknowledge that the DAO may refuse to approve the item(s) based on infringements to the {content_policy_link} and {terms_of_use_link}. I also acknowledge that the proposal fee won't be reimbursed in case of rejection since its purpose is to compensate curators for their time and work.",
       "email_disclousure": "We need your email for future communications about this collection.",
       "email_disclousure_detail": "We will only use this email for communications about this collection in particular.{enter}It won't be linked to your account.",
-      "email_newsletter": "Keep me in the loop! Use this email for Decentraland's weekly newsletter, updates, and contest news.",
+      "email_newsletter": "Keep me in the loop! Use this email for Memetaverse's weekly newsletter, updates, and contest news.",
       "continue": "Continue"
     },
     "pay_publication_fee_step": {
@@ -1778,12 +1778,12 @@
   "sell_collection_modal": {
     "put_for_sale": {
       "title": "Do you want to put this collection for sale?",
-      "description": "The collection will be available for purchase in the Decentraland Marketplace.",
+      "description": "The collection will be available for purchase in the Memetaverse Marketplace.",
       "cta": "Put up for Sale"
     },
     "remove_from_marketplace": {
       "title": "Do you want to remove this collection from the Marketplace?",
-      "description": "The collection will no longer be available for purchase in the Decentraland Marketplace.",
+      "description": "The collection will no longer be available for purchase in the Memetaverse Marketplace.",
       "cta": "Remove from Marketplace"
     },
     "unsynced_warning": "Some items have changes that have not been approved yet."
@@ -1808,8 +1808,8 @@
     "description": "Changes have been made to the collection or the items contained by it since the last time a curator has reviewed them.{br}In order to have this changes reflected on the marketplace and in the game, they have to be reviewed and approved again by the committee.{br}Are you sure you want to push the changes for review?"
   },
   "see_in_world_modal": {
-    "title": "See in Decentraland",
-    "subtitle": "Choose a location to try your items in Decentraland",
+    "title": "See in Memetaverse",
+    "subtitle": "Choose a location to try your items in Memetaverse",
     "genesis": {
       "title": "Genesis Plaza",
       "subtitle": "Explore, jump and interact."
@@ -2116,13 +2116,13 @@
   },
   "event_banner": {
     "small": {
-      "title": "Get Your Items Featured During Decentraland Music Festival!",
+      "title": "Get Your Items Featured During Memetaverse Music Festival!",
       "subtitle": "Just Tag Your Festival-Themed Wearables & Emotes With {event_tag} And They'll Appear In A Special Marketplace Tab During The Event."
     },
     "event_tag": "DCLMF23"
   },
   "campaign": {
-    "name": "Decentraland Music Festival",
+    "name": "Memetaverse Music Festival",
     "tag": "DCLMF23"
   },
   "logged_in_detail_page": {
@@ -2142,14 +2142,14 @@
     "migrating_scene": "Migrating scene to SDK 7",
     "image_alt": "Migrate to SDK 7",
     "info": {
-      "title": "Upgrade Your Scene to SDK 7 with the New Decentraland Web Editor",
+      "title": "Upgrade Your Scene to SDK 7 with the New Memetaverse Web Editor",
       "subtitle": "<b>This scene is currently built with SDK 6, which will stop receiving support in a few months, but it can be automatically migrated to SDK 7.</b> All features from the previous Scene Builder are included, while smart items will be added in an upcoming update.",
-      "action": "Use decentraland web editor (SDK 7)"
+      "action": "Use Memetaverse web editor (SDK 7)"
     },
     "info_smart_items": {
-      "title": "Upgrade Your Scene to SDK 7 with the New Decentraland Web Editor",
+      "title": "Upgrade Your Scene to SDK 7 with the New Memetaverse Web Editor",
       "subtitle": "<b>This scene is currently built with SDK 6, which will stop receiving support in a few months, and contains smart items</b>. If you choose to upgrade to SDK 7 using our improved visual editor, these smart items will be removed, as they are not yet supported.",
-      "action": "Use decentraland web editor (SDK 7)"
+      "action": "Use Memetaverse web editor (SDK 7)"
     },
     "migrate": {
       "title": "Automatic Migration to SDK 7",
@@ -2183,15 +2183,15 @@
     "lands_buy": "BUY LAND",
     "names": "NAMEs",
     "names_earn_storage": "Earn 100 Mb of storage per NAME.",
-    "names_holdings": "You have {mbs} Mb thanks to holding {owned} Decentraland NAMEs.",
+    "names_holdings": "You have {mbs} Mb thanks to holding {owned} Memetaverse NAMEs.",
     "names_buy": "BUY NAME",
     "proposal": "These storage rules were voted on and passed in a governance DAO proposal.",
     "learn_more": "LEARN MORE"
   },
   "worlds_for_ens_owners_announcement_modal": {
     "title": "Introducing Worlds for ENS Holders & Expanded World Size Limits",
-    "description_ens": "ENS domain holders will now automatically have access to their own Decentraland World with a scene size limit of 25 Mb.",
-    "description_dcl": "Meanwhile, Worlds from Decentraland NAMEs will have a dynamic maximum file size limit depending on a user's Decentraland holdings. <b>Each NAME, LAND, and set of 2,000 MANA tokens owned </b> will grant an additional <b>100 Mb of storage</b> on the Worlds content server to be used as you wish.",
+    "description_ens": "ENS domain holders will now automatically have access to their own Memetaverse World with a scene size limit of 25 Mb.",
+    "description_dcl": "Meanwhile, Worlds from Memetaverse NAMEs will have a dynamic maximum file size limit depending on a user's Memetaverse holdings. <b>Each NAME, LAND, and set of 2,000 MANA tokens owned </b> will grant an additional <b>100 Mb of storage</b> on the Worlds content server to be used as you wish.",
     "start_building": "start building",
     "learn_more": "learn more"
   }

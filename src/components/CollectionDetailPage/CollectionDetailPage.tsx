@@ -150,7 +150,7 @@ export default class CollectionDetailPage extends React.PureComponent<Props, Sta
 
     return (
       <>
-        <JumpIn size="small" active collection={collection} text={t('global.see_in_decentraland')} disabled={isLocked || !hasItems} />
+        <JumpIn size="small" active collection={collection} text={t('global.see_in_memetaverse')} disabled={isLocked || !hasItems} />
         <Button basic className="action-button" disabled={isLocked || !hasItems} onClick={this.handleNavigateToEditor}>
           <BuilderIcon name="cube" />
           <span className="text">{t('collection_detail_page.preview')}</span>

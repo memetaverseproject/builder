@@ -306,7 +306,7 @@ export default class DeployToLand extends React.PureComponent<Props, State> {
             primary
             className="action-button"
             as="a"
-            href={`${MARKETPLACE_WEB_URL}/lands?assetType=nft&section=land&isMap=false&isFullscreen=false&vendor=decentraland&page=1&sortBy=newest&onlyOnSale=true`}
+            href={`${MARKETPLACE_WEB_URL}/lands?assetType=nft&section=land&isMap=false&isFullscreen=false&vendor=memetaverse&page=1&sortBy=newest&onlyOnSale=true`}
             target="_blank"
           >
             {t('deployment_modal.land.empty.buy_land')}
@@ -315,7 +315,7 @@ export default class DeployToLand extends React.PureComponent<Props, State> {
             secondary
             className="action-button"
             as="a"
-            href={`${MARKETPLACE_WEB_URL}/lands?assetType=nft&section=land&isMap=false&isFullscreen=false&vendor=decentraland&page=1&sortBy=newest&onlyOnRent=true`}
+            href={`${MARKETPLACE_WEB_URL}/lands?assetType=nft&section=land&isMap=false&isFullscreen=false&vendor=memetaverse&page=1&sortBy=newest&onlyOnRent=true`}
             target="_blank"
           >
             {t('deployment_modal.land.empty.rent_land')}

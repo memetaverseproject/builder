@@ -515,8 +515,8 @@ export function itemReducer(state: ItemState = INITIAL_STATE, action: ItemReduce
                 collectionURN.thirdPartyCollectionId!,
                 itemURN.thirdPartyTokenId
               )
-            } else if (collectionURN.type === URNType.COLLECTIONS_V2) {
-              if (itemURN.type !== URNType.COLLECTIONS_V2) {
+            } else if (collectionURN.type === URNType.COLLECTIONS) {
+              if (itemURN.type !== URNType.COLLECTIONS) {
                 throw new Error(`The item ${item.id} is not part of a decentraland collection but it should be`)
               }
               newItemURN = buildCatalystItemURN(collectionURN.collectionAddress, itemURN.tokenId!)

@@ -81,7 +81,7 @@ export const PayPublicationFeeStep: React.FC<MapStateProps & { onNextStep: () =>
               })}
             </span>
             <span className="learn-more">
-              <a href="https://docs.decentraland.org/decentraland/publishing-wearables/" target="_blank" rel="noopener noreferrer">
+              <a href="https://docs.memetaverse.club/memetaverse/publishing-wearables/" target="_blank" rel="noopener noreferrer">
                 {t('publish_wizard_collection_modal.pay_publication_fee_step.learn_more')}
               </a>
             </span>

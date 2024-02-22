@@ -39,10 +39,10 @@ export async function getNewEditorScene(project: Project): Promise<EditorScene> 
     display: {
       title: project.title
     },
-    owner: 'Decentraland',
+    owner: 'Memetaverse',
     contact: {
-      name: 'Decentraland',
-      email: 'support@decentraland.org'
+      name: 'Memetaverse',
+      email: 'support@memetaverse.club'
     },
     main: 'game.js',
     _mappings: mappings

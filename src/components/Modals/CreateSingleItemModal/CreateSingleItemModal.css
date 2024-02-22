@@ -219,9 +219,9 @@
   background-color: var(--secondary-text);
 }
 
-.CreateSingleItemModal .importer-thumbnail-container .WearablePreview {
+/* .CreateSingleItemModal .importer-thumbnail-container .WearablePreview {
   display: none;
-}
+} */
 
 .CreateSingleItemModal .thumbnail-step-container {
   width: 100%;

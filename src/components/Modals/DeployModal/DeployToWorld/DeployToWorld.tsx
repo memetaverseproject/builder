@@ -223,7 +223,7 @@ export default function DeployToWorld({
             secondary
             className={styles.modalBodyStateActionButton}
             as="a"
-            href="https://decentraland.org/blog/project-updates/manage-names-in-the-builder"
+            href="#"
             rel="noopener noreferrer"
             target="_blank"
           >

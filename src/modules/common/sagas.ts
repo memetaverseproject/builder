@@ -1,8 +1,6 @@
 import { all } from 'redux-saga/effects'
 import { CatalystClient } from 'dcl-catalyst-client'
 import { BuilderClient } from '@mtvproject/builder-client'
-import { ApplicationName } from '@mtvproject/dapps/dist/modules/features/types'
-
 import { createProfileSaga } from '@mtvproject/dapps/dist/modules/profile/sagas'
 import { transactionSaga } from '@mtvproject/dapps/dist/modules/transaction/sagas'
 import { authorizationSaga } from '@mtvproject/dapps/dist/modules/authorization/sagas'

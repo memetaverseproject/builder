@@ -52,13 +52,13 @@ export const HomePage: React.FC<Props> = props => {
   const getLearnMoreLink = (card: string): string => {
     switch (card) {
       case NavigationTab.COLLECTIONS:
-        return 'https://docs.decentraland.org/creator/wearables/wearables-overview/#collections'
+        return 'https://docs.memetaverse.club/creator/wearables/wearables-overview/#collections'
       case NavigationTab.SCENES:
-        return 'https://docs.decentraland.org/creator/builder/builder-101/#scenes'
+        return 'https://docs.memetaverse.club/creator/builder/builder-101/#scenes'
       case NavigationTab.LAND:
-        return 'https://docs.decentraland.org/player/market/land-manager/'
+        return 'https://docs.memetaverse.club/player/market/land-manager/'
       case NavigationTab.NAMES:
-        return 'https://decentraland.org/blog/project-updates/manage-names-in-the-builder/'
+        return 'https://memetaverse.club/blog/project-updates/manage-names-in-the-builder/'
       default:
         throw new Error('Invalid Navigation Tab')
     }

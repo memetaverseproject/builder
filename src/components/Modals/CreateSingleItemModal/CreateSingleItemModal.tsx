@@ -14,9 +14,11 @@ import {
   InputOnChangeData,
   SelectField,
   DropdownProps,
-  WearablePreview,
-  Message
+  Message,
+  WearablePreview
 } from '@mtvproject/ui'
+
+
 import { t } from '@mtvproject/dapps/dist/modules/translation/utils'
 import Modal from '@mtvproject/dapps/dist/containers/Modal'
 import { isErrorWithMessage } from '@mtvproject/dapps/dist/lib/error'
@@ -452,6 +454,7 @@ export default class CreateSingleItemModal extends React.PureComponent<Props, St
 
   getMetricsAndScreenshot = async () => {
     const { type, previewController, model, contents, category, thumbnail } = this.state
+
     if (type && model && contents) {
       const data = await getItemData({
         wearablePreviewController: previewController,
@@ -494,7 +497,7 @@ export default class CreateSingleItemModal extends React.PureComponent<Props, St
     })
   }
 
-  handleOpenDocs = () => window.open('https://docs.decentraland.org/3d-modeling/3d-models/', '_blank')
+  handleOpenDocs = () => window.open('https://docs.memetaverse.club/3d-modeling/3d-models/', '_blank')
 
   handleNameChange = (_event: React.ChangeEvent<HTMLInputElement>, props: InputOnChangeData) =>
     this.setState({ name: props.value.slice(0, ITEM_NAME_MAX_LENGTH) })
@@ -699,7 +702,7 @@ export default class CreateSingleItemModal extends React.PureComponent<Props, St
   }
 
   handleFileLoad = async () => {
-    const { weareblePreviewUpdated, type, model } = this.state
+    const { model, type, weareblePreviewUpdated } = this.state
 
     // if model is an image, the wearable preview won't be needed
     if (model && isImageFile(model)) {
@@ -707,8 +710,8 @@ export default class CreateSingleItemModal extends React.PureComponent<Props, St
     }
 
     const controller = WearablePreview.createController('thumbnail-picker')
-    this.setState({ previewController: controller })
 
+    this.setState({ previewController: controller })
     if (weareblePreviewUpdated) {
       if (type === ItemType.EMOTE) {
         const length = await controller.emote.getLength()
@@ -726,7 +729,6 @@ export default class CreateSingleItemModal extends React.PureComponent<Props, St
     if (!blob) {
       return null
     }
-
     const wearablePreviewExtraOptions = isEmote
       ? {
           profile: 'default',
@@ -736,7 +738,6 @@ export default class CreateSingleItemModal extends React.PureComponent<Props, St
           wheelZoom: 2
         }
       : {}
-
     return (
       <WearablePreview
         id="thumbnail-picker"
@@ -811,7 +812,7 @@ export default class CreateSingleItemModal extends React.PureComponent<Props, St
     const categories: string[] = type === ItemType.WEARABLE ? getWearableCategories(contents) : getEmoteCategories()
 
     const raritiesLink =
-      'https://docs.decentraland.org/creator/wearables-and-emotes/manage-collections' +
+      'https://docs.memetaverse.club/creator/wearables-and-emotes/manage-collections' +
       (type === ItemType.EMOTE
         ? '/uploading-emotes/#rarity'
         : isSmart({ type, contents })
@@ -1032,7 +1033,7 @@ export default class CreateSingleItemModal extends React.PureComponent<Props, St
             <Header sub className="field-header">
               {t('create_single_item_modal.smart_wearable_permissions_label')}
               <a
-                href="https://docs.decentraland.org/creator/development-guide/sdk7/scene-metadata/#required-permissions"
+                href="https://docs.memetaverse.club/creator/development-guide/sdk7/scene-metadata/#required-permissions"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="learn-more"

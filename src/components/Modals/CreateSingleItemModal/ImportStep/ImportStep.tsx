@@ -199,7 +199,7 @@ export default class ImportStep extends React.PureComponent<Props, State> {
   }
 
   handleOpenLearnMoreOnError = () => {
-    window.open('https://docs.decentraland.org/creator/development-guide/sdk7/scene-metadata/', '_blank', 'noopener noreferrer')
+    window.open('https://docs.memetaverse.club/creator/development-guide/sdk7/scene-metadata/', '_blank', 'noopener noreferrer')
   }
 
   handleDropAccepted = async (acceptedFiles: File[]) => {
@@ -224,8 +224,8 @@ export default class ImportStep extends React.PureComponent<Props, State> {
       }
 
       let acceptedFileProps: AcceptedFileProps = {
-        id: changeItemFile ? item!.id : uuid.v4(),
-        name: changeItemFile ? item!.name : cleanAssetName(file.name),
+        id: changeItemFile ? item?.id : uuid.v4(),
+        name: changeItemFile ? item?.name : cleanAssetName(file.name),
         file,
         category: isRepresentation || changeItemFile ? category : undefined
       }
@@ -338,7 +338,7 @@ export default class ImportStep extends React.PureComponent<Props, State> {
   }
 
   handleOpenMoreInformation = () => {
-    window.open('https://docs.decentraland.org/decentraland/creating-wearables/', '_blank', 'noopener noreferrer')
+    window.open('https://docs.memetaverse.club/memetaverse/creating-wearables/', '_blank', 'noopener noreferrer')
   }
 
   renderMoreInformation() {

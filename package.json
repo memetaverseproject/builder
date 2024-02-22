@@ -41,7 +41,7 @@
     "decentraland-ecs": "6.12.4-7784644013.commit-f770b3e",
     "decentraland-experiments": "^1.0.2",
     "@mtvproject/transactions": "^0.0.10-development",
-    "@mtvproject/ui": "^0.0.9-development",
+    "@mtvproject/ui": "^0.0.10-development",
     "ethers": "^5.6.8",
     "file-saver": "^2.0.1",
     "graphql": "^15.8.0",

@@ -92,12 +92,12 @@ export const ReviewContentPolicyStep: React.FC<Props> = props => {
                   <span>
                     {t('publish_wizard_collection_modal.review_content_policy_step.accept_terms_of_use', {
                       terms_of_use_link: (
-                        <a href="https://decentraland.org/terms/" rel="noopener noreferrer" target="_blank">
+                        <a href="#" rel="noopener noreferrer" target="_blank">
                           {t('publish_wizard_collection_modal.review_content_policy_step.terms_of_use')}
                         </a>
                       ),
                       content_policy_link: (
-                        <a href="https://decentraland.org/content/" rel="noopener noreferrer" target="_blank">
+                        <a href="#" rel="noopener noreferrer" target="_blank">
                           {t('publish_wizard_collection_modal.review_content_policy_step.content_policy')}
                         </a>
                       )
@@ -109,12 +109,12 @@ export const ReviewContentPolicyStep: React.FC<Props> = props => {
                   <span>
                     {t('publish_wizard_collection_modal.review_content_policy_step.acknowledge_dao_terms', {
                       terms_of_use_link: (
-                        <a href="https://decentraland.org/terms/" rel="noopener noreferrer" target="_blank">
+                        <a href="https://memetaverse.club/terms/" rel="noopener noreferrer" target="_blank">
                           {t('publish_wizard_collection_modal.review_content_policy_step.terms_of_use')}
                         </a>
                       ),
                       content_policy_link: (
-                        <a href="https://decentraland.org/content/" rel="noopener noreferrer" target="_blank">
+                        <a href="https://memetaverse.club/content/" rel="noopener noreferrer" target="_blank">
                           {t('publish_wizard_collection_modal.review_content_policy_step.content_policy')}
                         </a>
                       )

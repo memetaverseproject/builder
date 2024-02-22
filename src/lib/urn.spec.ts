@@ -97,8 +97,8 @@ describe('when decoding an URN', () => {
     describe('and the URN is a collection URN', () => {
       it('should decode and return each group', () => {
         expect(decodeURN('urn:memetaverse:goerli:collections-v2:0xc6d2000a7a1ddca92941f4e2b41360fe4ee2abd8')).toEqual({
-          type: URNType.COLLECTIONS_V2,
-          protocol: URNProtocol.GOERLI,
+          type: URNType.COLLECTIONS,
+          protocol: URNProtocol.NEBULAS,
           collectionAddress: '0xc6d2000a7a1ddca92941f4e2b41360fe4ee2abd8',
           suffix: '0xc6d2000a7a1ddca92941f4e2b41360fe4ee2abd8'
         })
@@ -108,8 +108,8 @@ describe('when decoding an URN', () => {
     describe('and the URN is an item URN', () => {
       it('should decode and return each group', () => {
         expect(decodeURN('urn:memetaverse:goerli:collections-v2:0xc6d2000a7a1ddca92941f4e2b41360fe4ee2abd8:tokenId')).toEqual({
-          type: URNType.COLLECTIONS_V2,
-          protocol: URNProtocol.GOERLI,
+          type: URNType.COLLECTIONS,
+          protocol: URNProtocol.NEBULAS,
           tokenId: 'tokenId',
           collectionAddress: '0xc6d2000a7a1ddca92941f4e2b41360fe4ee2abd8',
           suffix: '0xc6d2000a7a1ddca92941f4e2b41360fe4ee2abd8:tokenId'
@@ -125,7 +125,7 @@ describe('when decoding an URN', () => {
       it('should decode and return each group', () => {
         expect(decodeURN(thirdPartyRecordURN)).toEqual({
           type: URNType.COLLECTIONS_THIRDPARTY,
-          protocol: URNProtocol.MATIC,
+          protocol: URNProtocol.U2U,
           suffix: 'crypto-motors',
           thirdPartyName: 'crypto-motors',
           thirdPartyCollectionId: undefined,
@@ -138,7 +138,7 @@ describe('when decoding an URN', () => {
       it('should decode and return each group', () => {
         expect(decodeURN(thirdPartyRecordURN + ':tp-collection-id')).toEqual({
           type: URNType.COLLECTIONS_THIRDPARTY,
-          protocol: URNProtocol.MATIC,
+          protocol: URNProtocol.U2U,
           suffix: 'crypto-motors:tp-collection-id',
           thirdPartyName: 'crypto-motors',
           thirdPartyCollectionId: 'tp-collection-id',
@@ -151,7 +151,7 @@ describe('when decoding an URN', () => {
       it('should decode and return each group', () => {
         expect(decodeURN(thirdPartyRecordURN + ':another-tp-collection-id:better-token-id')).toEqual({
           type: URNType.COLLECTIONS_THIRDPARTY,
-          protocol: URNProtocol.MATIC,
+          protocol: URNProtocol.U2U,
           suffix: 'crypto-motors:another-tp-collection-id:better-token-id',
           thirdPartyName: 'crypto-motors',
           thirdPartyCollectionId: 'another-tp-collection-id',

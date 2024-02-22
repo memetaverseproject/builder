@@ -55,7 +55,7 @@ export default class MobilePage extends React.PureComponent<Props, State> {
               inverted
               primary
               as="a"
-              href="https://docs.decentraland.org/creator"
+              href="https://docs.memetaverse.club/creator"
               rel="noopener noreferrer"
               target="_blank"
               content={t('global.learn_more')}
