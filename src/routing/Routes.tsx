@@ -138,10 +138,6 @@ export default class Routes extends React.Component<Props, State> {
   }
 
   render() {
-    return (
-      <>
-        {this.renderRoutes()}
-      </>
-    )
+    return <>{this.renderRoutes()}</>
   }
 }

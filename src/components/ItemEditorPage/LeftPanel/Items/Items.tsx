@@ -1,19 +1,7 @@
 import * as React from 'react'
 import { T, t } from '@mtvproject/dapps/dist/modules/translation/utils'
 import { isThirdParty } from 'lib/urn'
-import {
-  Section,
-  Loader,
-  Tabs,
-  Button,
-  Icon as DCLIcon,
-  Pagination,
-  PaginationProps,
-  Header,
-  Modal,
-  Checkbox,
-  Popup
-} from '@mtvproject/ui'
+import { Section, Loader, Tabs, Button, Icon as DCLIcon, Pagination, PaginationProps, Header, Modal, Checkbox, Popup } from '@mtvproject/ui'
 import { Item, ItemType } from 'modules/item/types'
 import { hasBodyShape } from 'modules/item/utils'
 import { TP_TRESHOLD_TO_REVIEW } from 'modules/collection/constants'

@@ -151,13 +151,7 @@ export default class ManageCollectionRoleModal extends React.PureComponent<Props
             )}
           </div>
           <ModalActions>
-            <NetworkButton
-              primary
-              onClick={this.handleSubmit}
-              loading={isLoading}
-              disabled={!this.hasRoleChanged()}
-              network={Network.U2U}
-            >
+            <NetworkButton primary onClick={this.handleSubmit} loading={isLoading} disabled={!this.hasRoleChanged()} network={Network.U2U}>
               {t('global.confirm')}
             </NetworkButton>
           </ModalActions>

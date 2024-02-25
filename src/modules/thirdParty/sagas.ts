@@ -74,11 +74,7 @@ import {
 import { getPublishItemsSignature } from './utils'
 import { ThirdParty } from './types'
 
-export function* getContractInstance(
-  contract: any,
-  chainId: ChainId,
-  provider: providers.ExternalProvider
-) {
+export function* getContractInstance(contract: any, chainId: ChainId, provider: providers.ExternalProvider) {
   const contractData: ContractData = yield call(getContract, contract, chainId)
   const contractInstance = new Contract(contractData.address, contractData.abi, new providers.Web3Provider(provider))
   return contractInstance

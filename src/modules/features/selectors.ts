@@ -47,7 +47,7 @@ export const getIsCreateSceneOnlySDK7Enabled = (state: RootState) => {
 }
 
 export const getIsAuthDappEnabled = (_: RootState) => {
-  return false;
+  return false
 }
 
 export const getIsEnsAddressEnabled = (state: RootState) => {

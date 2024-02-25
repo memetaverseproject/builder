@@ -104,7 +104,7 @@ export function extractThirdPartyId(urn: URN): string {
 }
 
 export function extractThirdPartyTokenId(_: URN) {
-  return "";
+  return ''
   // const decodedURN = decodeURN(urn)
   // if (decodedURN.type !== URNType.COLLECTIONS_THIRDPARTY) {
   //   throw new Error(`Tried to build a third party token for a non third party URN "${urn}"`)
@@ -121,7 +121,7 @@ export function isThirdParty(urn?: string) {
     return false
   }
 
-  return false;
+  return false
 }
 
 export function extractEntityId(urn: URN): string {

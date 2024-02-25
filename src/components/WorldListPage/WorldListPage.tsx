@@ -2,20 +2,7 @@ import React, { ReactNode, useCallback, useEffect, useState } from 'react'
 import classNames from 'classnames'
 import { t } from '@mtvproject/dapps/dist/modules/translation/utils'
 import { formatNumber } from '@mtvproject/dapps/dist/lib/utils'
-import {
-  Button,
-  Table,
-  Row,
-  Column,
-  Header,
-  Section,
-  Container,
-  Pagination,
-  Dropdown,
-  Empty,
-  Icon as DCLIcon,
-  Popup
-} from '@mtvproject/ui'
+import { Button, Table, Row, Column, Header, Section, Container, Pagination, Dropdown, Empty, Icon as DCLIcon, Popup } from '@mtvproject/ui'
 import { config } from 'config'
 import { isDevelopment } from 'lib/environment'
 import { WorldsWalletStats } from 'lib/api/worlds'
