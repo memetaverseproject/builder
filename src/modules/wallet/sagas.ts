@@ -17,7 +17,7 @@ import { buildManaAuthorization } from 'lib/mana'
 import { TRANSACTIONS_API_URL } from './utils'
 
 const baseWalletSaga = createWalletSaga({
-  CHAIN_ID: config.get('CHAIN_ID') || ChainId.ETHEREUM_MAINNET,
+  CHAIN_ID: config.get('CHAIN_ID') || ChainId.U2U_MAINNET,
   POLL_INTERVAL: 0,
   TRANSACTIONS_API_URL
 })
@@ -37,7 +37,6 @@ function* handleWalletChange(action: ConnectWalletSuccessAction | ChangeAccountA
   const chainId = wallet.networks.U2U.chainId
   // All authorizations to be fetched must be added to the following list
   const authorizations: Authorization[] = []
-
   try {
     authorizations.push(buildManaAuthorization(wallet.address, chainId, ContractName.CollectionManager))
 

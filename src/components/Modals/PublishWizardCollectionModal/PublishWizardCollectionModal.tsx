@@ -87,7 +87,7 @@ export const PublishWizardCollectionModal: React.FC<Props> = props => {
       authorizedContractLabel: ContractName.CollectionManager,
       targetContract: manaContract,
       targetContractName: ContractName.MtvToken,
-      requiredAllowanceInWei: ethers.BigNumber.from(rarities[0].prices!.MANA).mul(items.length).toString(),
+      requiredAllowanceInWei: ethers.BigNumber.from(rarities[0].prices!.MTV).mul(items.length).toString(),
       authorizationType: AuthorizationType.ALLOWANCE,
       onAuthorized: () => onPublish(collection, items, emailAddress, subscribeToNewsletter)
     })

@@ -148,7 +148,7 @@ export const isEmoteItemType = (item: Item | Item<ItemType.EMOTE>): item is Item
 export const isEmoteData = (data: WearableData | EmoteDataADR74): data is EmoteDataADR74 => (data as EmoteDataADR74).loop !== undefined
 
 export enum Currency {
-  MANA = 'MANA',
+  MTV = 'MTV',
   USD = 'USD'
 }
 

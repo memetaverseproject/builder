@@ -76,8 +76,6 @@ import {
   INITIATE_TP_APPROVAL_FLOW
 } from './actions'
 import { getMethodData, getWallet } from 'modules/wallet/utils'
-import { buildCollectionForumPost } from 'modules/forum/utils'
-import { createCollectionForumPostRequest } from 'modules/forum/actions'
 import {
   setItemsTokenIdRequest,
   FETCH_ITEMS_SUCCESS,
@@ -114,7 +112,6 @@ import {
   getData as getItemsById,
   getPaginationData as getItemPaginationData
 } from 'modules/item/selectors'
-import { getName } from 'modules/profile/selectors'
 import { buildItemEntity, buildStandardWearableContentHash, hasOldHashedContents } from 'modules/item/export'
 import { getCurationsByCollectionId } from 'modules/curations/collectionCuration/selectors'
 import {
@@ -158,6 +155,9 @@ import {
   toPaginationStats
 } from './utils'
 import { isErrorWithCode } from 'lib/error'
+import { createCollectionForumPostRequest } from 'modules/forum/actions'
+import { buildCollectionForumPost } from 'modules/forum/utils'
+import { getName } from 'modules/profile/selectors'
 
 const THIRD_PARTY_MERKLE_ROOT_CHECK_MAX_RETRIES = 160
 
@@ -658,7 +658,6 @@ export function* collectionSaga(legacyBuilderClient: BuilderAPI, client: Builder
     const manager = getContract(ContractName.CollectionManager, maticChainId)
     const forwarder = getContract(ContractName.Forwarder, maticChainId)
     const data: string = yield call(getMethodData, implementation.populateTransaction.setApproved(isApproved))
-
     const txHash: string = yield call(sendTransaction, contract, committee =>
       committee.manageCollection(manager.address, forwarder.address, collection.contractAddress!, [data])
     )

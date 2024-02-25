@@ -121,8 +121,7 @@ export function isThirdParty(urn?: string) {
     return false
   }
 
-  const decodedURN = decodeURN(urn)
-  return decodedURN.type === URNType.COLLECTIONS_THIRDPARTY
+  return false;
 }
 
 export function extractEntityId(urn: URN): string {

@@ -24,7 +24,7 @@ export const PayPublicationFeeStep: React.FC<MapStateProps & { onNextStep: () =>
   if (refRarity) {
     priceUSD = refRarity.prices!.USD
 
-    totalPrice = ethers.BigNumber.from(refRarity.prices!.MANA).mul(items.length).toString()
+    totalPrice = ethers.BigNumber.from(refRarity.prices!.MTV).mul(items.length).toString()
 
     totalPriceUSD = ethers.BigNumber.from(priceUSD).mul(items.length).toString()
 
