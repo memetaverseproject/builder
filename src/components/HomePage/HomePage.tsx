@@ -17,7 +17,7 @@ import './HomePage.css'
 export const LOCALSTORAGE_LAST_VISITED_SECTION_KEY = 'builder-last-visited-section'
 
 const localStorage = getLocalStorage()
-const cards = [NavigationTab.COLLECTIONS, NavigationTab.SCENES, NavigationTab.LAND, NavigationTab.NAMES]
+const cards = [NavigationTab.COLLECTIONS, NavigationTab.SCENES, NavigationTab.LAND]
 
 export const HomePage: React.FC<Props> = props => {
   const { isLoggingIn, isLoggedIn, hasRouterHistory, onNavigate } = props

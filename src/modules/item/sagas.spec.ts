@@ -1607,7 +1607,7 @@ describe('when handling the fetch of rarities', () => {
         price: '4000000000000000000',
         maxSupply: '100000',
         prices: {
-          [Currency.MANA]: '4000000000000000000',
+          [Currency.MTV]: '4000000000000000000',
           [Currency.USD]: '10000000000000000000'
         }
       }

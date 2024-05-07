@@ -18,7 +18,7 @@ import {
 import { NetworkButton } from '@mtvproject/dapps/dist/containers'
 import Modal from '@mtvproject/dapps/dist/containers/Modal'
 import { T, t } from '@mtvproject/dapps/dist/modules/translation/utils'
-import { toFixedMANAValue } from '@mtvproject/dapps/dist/lib/mana'
+import { toFixedMTVValue } from '@mtvproject/dapps/dist/lib/mana'
 
 import Info from 'components/Info'
 import { isValid } from 'lib/address'
@@ -63,7 +63,7 @@ export default class EditPriceAndBeneficiaryModal extends React.PureComponent<Pr
   }
 
   handlePriceChange = (_event: React.ChangeEvent<HTMLInputElement>, props: InputOnChangeData) => {
-    this.setState({ price: toFixedMANAValue(props.value) })
+    this.setState({ price: toFixedMTVValue(props.value) })
   }
 
   handleBeneficiaryChange = (_event: React.ChangeEvent<HTMLInputElement>, props: InputOnChangeData) => {

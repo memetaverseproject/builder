@@ -33,12 +33,12 @@ export default class Navigation extends React.PureComponent<Props> {
           <Tabs.Tab active={activeTab === NavigationTab.LAND} onClick={() => this.handleOnTabClick(locations.land())}>
             {t('navigation.land')}
           </Tabs.Tab>
-          <Tabs.Tab active={activeTab === NavigationTab.NAMES} onClick={() => this.handleOnTabClick(locations.ens())}>
+          {/* <Tabs.Tab active={activeTab === NavigationTab.NAMES} onClick={() => this.handleOnTabClick(locations.ens())}>
             {t('navigation.names')}
           </Tabs.Tab>
           <Tabs.Tab active={activeTab === NavigationTab.WORLDS} onClick={() => this.handleOnTabClick(locations.worlds())}>
             {t('navigation.worlds')}
-          </Tabs.Tab>
+          </Tabs.Tab> */}
           {isCommitteeMember ? (
             <Tabs.Tab active={activeTab === NavigationTab.CURATION} onClick={() => this.handleOnTabClick(locations.curation())}>
               {t('navigation.curation')}

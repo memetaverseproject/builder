@@ -4,7 +4,7 @@ import { Network } from '@mtvproject/schemas'
 import { config } from 'config'
 import { Button, Column, Mtv, Modal, Row } from '@mtvproject/ui'
 import { t } from '@mtvproject/dapps/dist/modules/translation/utils'
-import { toFixedMANAValue } from '@mtvproject/dapps/dist/lib/mana'
+import { toFixedMTVValue } from '@mtvproject/dapps/dist/lib/mana'
 import { Currency, Rarity } from 'modules/item/types'
 import { MapStateProps } from '../PublishWizardCollectionModal.types'
 import './PayPublicationFeeStep.css'
@@ -77,7 +77,7 @@ export const PayPublicationFeeStep: React.FC<MapStateProps & { onNextStep: () =>
             <span>
               {t('publish_wizard_collection_modal.pay_publication_fee_step.subtitle', {
                 currency: 'USD',
-                publicationFee: toFixedMANAValue(ethers.utils.formatEther(priceUSD))
+                publicationFee: toFixedMTVValue(ethers.utils.formatEther(priceUSD))
               })}
             </span>
             <span className="learn-more">
@@ -95,7 +95,7 @@ export const PayPublicationFeeStep: React.FC<MapStateProps & { onNextStep: () =>
               <div className="element">
                 <div className="element-header">{t('publish_wizard_collection_modal.pay_publication_fee_step.fee_per_item')}</div>
                 <div className="element-content">
-                  {Currency.USD} {toFixedMANAValue(ethers.utils.formatEther(priceUSD))}
+                  {Currency.USD} {toFixedMTVValue(ethers.utils.formatEther(priceUSD))}
                 </div>
               </div>
               <div className="element">
@@ -103,14 +103,14 @@ export const PayPublicationFeeStep: React.FC<MapStateProps & { onNextStep: () =>
                   {t('publish_wizard_collection_modal.pay_publication_fee_step.total_in_usd', { currency: Currency.USD })}
                 </div>
                 <div className="element-content total-amount">
-                  {Currency.USD} {toFixedMANAValue(ethers.utils.formatEther(totalPriceUSD))}
+                  {Currency.USD} {toFixedMTVValue(ethers.utils.formatEther(totalPriceUSD))}
                 </div>
               </div>
               <div className="element">
                 <div className="element-header">{t('publish_wizard_collection_modal.pay_publication_fee_step.total_in_mana')}</div>
                 <div className="element-content total-amount">
                   <Mtv showTooltip network={Network.U2U} size="small">
-                    {toFixedMANAValue(ethers.utils.formatEther(totalPrice))}
+                    {toFixedMTVValue(ethers.utils.formatEther(totalPrice))}
                   </Mtv>
                 </div>
               </div>
@@ -126,7 +126,7 @@ export const PayPublicationFeeStep: React.FC<MapStateProps & { onNextStep: () =>
             {t('publish_wizard_collection_modal.pay_publication_fee_step.pay', {
               value: (
                 <Mtv showTooltip network={Network.U2U} size="medium">
-                  {toFixedMANAValue(ethers.utils.formatEther(totalPrice))}
+                  {toFixedMTVValue(ethers.utils.formatEther(totalPrice))}
                 </Mtv>
               )
             })}
