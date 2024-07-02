@@ -1,4 +1,5 @@
 import { Props as IconProps } from 'components/Icon/Icon.types'
+import React from 'react'
 
 export type DefaultProps = {
   text: React.ReactNode
@@ -7,6 +8,7 @@ export type DefaultProps = {
   isActive: boolean
   isDisabled: boolean
   className: string
+  IconComponent?: React.ElementType
 }
 
 export type Props = DefaultProps & {

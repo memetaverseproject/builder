@@ -37,13 +37,15 @@ export enum ItemMetadataType {
 export const BODY_SHAPE_CATEGORY = 'body_shape'
 
 export enum BodyShapeType {
-  BOTH = 'both',
+  MONKEY = 'monkey',
   MALE = 'male',
-  FEMALE = 'female'
+  FEMALE = 'female',
+  BOTH = 'both',
 }
 export enum WearableBodyShapeType {
   MALE = 'BaseMale',
-  FEMALE = 'BaseFemale'
+  FEMALE = 'BaseFemale',
+  MONKEY= 'BaseMonkey'
 }
 
 export type WearableRepresentation = {

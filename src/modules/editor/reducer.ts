@@ -376,7 +376,13 @@ export const editorReducer = (state = INITIAL_STATE, action: EditorReducerAction
             [WearableCategory.FACIAL_HAIR]: pickRandom(filterWearables(wearables, WearableCategory.FACIAL_HAIR, BodyShape.MALE)),
             [WearableCategory.UPPER_BODY]: pickRandom(filterWearables(wearables, WearableCategory.UPPER_BODY, BodyShape.MALE)),
             [WearableCategory.LOWER_BODY]: pickRandom(filterWearables(wearables, WearableCategory.LOWER_BODY, BodyShape.MALE))
-          }
+          },
+          [BodyShape.MONKEY]: {
+
+          },
+          [BodyShape.KID_MONKEY]: {
+
+          },
         }
       }
     }

@@ -18,7 +18,7 @@ import {
 import { NetworkButton } from '@mtvproject/dapps/dist/containers'
 import Modal from '@mtvproject/dapps/dist/containers/Modal'
 import { T, t } from '@mtvproject/dapps/dist/modules/translation/utils'
-import { toFixedMTVValue } from '@mtvproject/dapps/dist/lib/mana'
+import { toFixedMTVValue } from '@mtvproject/dapps/dist/lib/mtv'
 
 import Info from 'components/Info'
 import { isValid } from 'lib/address'

@@ -21,3 +21,4 @@ export default class Icon extends React.PureComponent<Props> {
     return <div className={classNames('Icon', iconName, { clickeable: !!onClick }, className)} onClick={onClick || noop} />
   }
 }
+

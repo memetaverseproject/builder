@@ -120,7 +120,9 @@ describe('when getting the selected base wearables', () => {
             [WearableCategory.FACIAL_HAIR]: wearable,
             [WearableCategory.UPPER_BODY]: wearable,
             [WearableCategory.LOWER_BODY]: wearable
-          }
+          },
+          [BodyShape.KID_MONKEY]: {},
+          [BodyShape.MONKEY]: {},
         }
       }
     }

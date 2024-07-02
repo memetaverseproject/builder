@@ -98,7 +98,7 @@ describe('when handling the approve claim mana request', () => {
 
     await expectSaga(ensSaga, builderClient, ensApi)
       .provide([
-        [call(getWallet), { address: 'address', chainId: ChainId.ETHEREUM_GOERLI }],
+        [call(getWallet), { address: 'address', chainId: ChainId.U2U_NEBULAS }],
         [call(getSigner), signer],
         [call([ERC20__factory, 'connect'], MANA_ADDRESS, signer), manaContract]
       ])
@@ -121,7 +121,7 @@ describe('when handling the fetch of authorizations request', () => {
     await expectSaga(ensSaga, builderClient, ensApi)
       .provide([
         [select(getAddress), from],
-        [call(getChainIdByNetwork, Network.ETHEREUM), ChainId.ETHEREUM_GOERLI]
+        [call(getChainIdByNetwork, Network.ETHEREUM), ChainId.U2U_NEBULAS]
       ])
       .call(manaContract.allowance, from, CONTROLLER_V2_ADDRESS)
       .dispatch(fetchENSAuthorizationRequest())
@@ -178,7 +178,7 @@ describe('when handling the claim name request', () => {
       await expectSaga(ensSaga, builderClient, ensApi)
         .provide([
           [call(getSigner), signer],
-          [call(getWallet), { address, chainId: ChainId.ETHEREUM_GOERLI }],
+          [call(getWallet), { address, chainId: ChainId.U2U_NEBULAS }],
           [select(getLands), []],
           [matchers.call.fn(DclListsAPI.prototype.fetchBannedNames), bannedNames],
           [matchers.call.fn(MarketplaceAPI.prototype.fetchENSList), ensNames],
@@ -409,12 +409,12 @@ describe('when handling the set ens address request', () => {
   it('should call resolver contract with the ens domain and address', () => {
     return expectSaga(ensSaga, builderClient, ensApi)
       .provide([
-        [call(getWallet), { address: 'address', chainId: ChainId.ETHEREUM_GOERLI }],
+        [call(getWallet), { address: 'address', chainId: ChainId.U2U_NEBULAS }],
         [call(getSigner), { signer }],
         [call([ensResolverContract, 'setAddr(bytes32,address)'], namehash(ens.subdomain), address), { hash } as ethers.ContractTransaction],
         [call(waitForTx, hash), true]
       ])
-      .put(setENSAddressSuccess(ens, address, ChainId.ETHEREUM_GOERLI, hash))
+      .put(setENSAddressSuccess(ens, address, ChainId.U2U_NEBULAS, hash))
       .put(closeModal('EnsMapAddressModal'))
       .dispatch(setENSAddressRequest(ens, address))
       .silentRun()
@@ -424,7 +424,7 @@ describe('when handling the set ens address request', () => {
     const error = { message: 'an error message', code: 1, name: 'error' }
     return expectSaga(ensSaga, builderClient, ensApi)
       .provide([
-        [call(getWallet), { address: 'address', chainId: ChainId.ETHEREUM_GOERLI }],
+        [call(getWallet), { address: 'address', chainId: ChainId.U2U_NEBULAS }],
         [call(getSigner), { signer }],
         [call([ensResolverContract, 'setAddr(bytes32,address)'], namehash(ens.subdomain), address), throwError(error)],
         [call(waitForTx, hash), true]

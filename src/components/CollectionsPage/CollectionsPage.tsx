@@ -9,7 +9,6 @@ import {
   Dropdown,
   Table,
   Section,
-  Tabs,
   Loader,
   Pagination,
   PaginationProps,
@@ -18,7 +17,7 @@ import {
 import { t } from '@mtvproject/dapps/dist/modules/translation/utils'
 import { NavigationTab } from 'components/Navigation/Navigation.types'
 import LoggedInDetailPage from 'components/LoggedInDetailPage'
-import Icon from 'components/Icon'
+import { IconGrid, IconLink, IconList } from 'components/Icon'
 import Chip from 'components/Chip'
 import EventBanner from 'components/EventBanner'
 import { locations } from 'routing/locations'
@@ -188,15 +187,15 @@ export default class CollectionsPage extends React.PureComponent<Props> {
   renderMainActions = () => {
     const { isThirdPartyManager } = this.props
     return (
-      <Column align="right">
+      <Column align="left">
         <Row className="actions">
           {isThirdPartyManager && (
             <Button className="action-button" size="small" basic onClick={this.handleNewThirdPartyCollection}>
               {t('collections_page.new_third_party_collection')}
             </Button>
           )}
-          <Button className="action-button open-editor" size="small" basic onClick={this.handleOpenEditor}>
-            <Icon name="cube" />
+          <Button className="action-button open-editor" size="small"  onClick={this.handleOpenEditor}>
+            <IconLink/> 
             {t('item_editor.open')}
           </Button>
           <Button className="action-button" size="small" primary onClick={this.handleNewCollection}>
@@ -217,6 +216,8 @@ export default class CollectionsPage extends React.PureComponent<Props> {
             <Dropdown
               direction="left"
               value={sort}
+              button={true}
+              className={"small"}
               options={[
                 { value: CurationSortOptions.MOST_RELEVANT, text: t('curation_page.order.most_relevant') },
                 { value: CurationSortOptions.CREATED_AT_DESC, text: t('global.order.newest') },
@@ -231,13 +232,13 @@ export default class CollectionsPage extends React.PureComponent<Props> {
           )}
           <Chip
             className="grid"
-            icon="grid"
+            IconComponent={IconGrid}
             isActive={view === CollectionPageView.GRID}
             onClick={() => onSetView(CollectionPageView.GRID)}
           />
           <Chip
             className="list"
-            icon="table"
+            IconComponent={IconList}
             isActive={view === CollectionPageView.LIST}
             onClick={() => onSetView(CollectionPageView.LIST)}
           />
@@ -251,7 +252,6 @@ export default class CollectionsPage extends React.PureComponent<Props> {
       collectionsPaginationData,
       itemsPaginationData,
       view,
-      hasUserOrphanItems,
       isLoadingItems,
       isLoadingCollections,
       isLoadingOrphanItem
@@ -265,13 +265,12 @@ export default class CollectionsPage extends React.PureComponent<Props> {
     if (isLoadingOrphanItem) {
       return <Loader active size="large" />
     }
-
     return (
       <>
         <EventBanner />
         <div className="filters">
           <Container>
-            <Tabs isFullscreen>
+            {/* <Tabs isFullscreen>
               {hasUserOrphanItems && (
                 // TODO: Remove tabs when there are no users with orphan items
                 <>
@@ -283,13 +282,16 @@ export default class CollectionsPage extends React.PureComponent<Props> {
                   </Tabs.Tab>
                 </>
               )}
+              
+            </Tabs> */}
+            <Row height={50}>
               {this.renderMainActions()}
-            </Tabs>
-            <Row height={30}>
+              {this.renderViewActions()}
+            </Row>
+            <Row height={50}>
               <Column>
                 <Row>{!isLoadingItems && !!count && count > 0 && <Header sub>{t('collections_page.results', { count })}</Header>}</Row>
               </Column>
-              {this.renderViewActions()}
             </Row>
           </Container>
         </div>

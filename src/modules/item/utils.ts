@@ -144,6 +144,8 @@ export function toBodyShapeType(wearableBodyShape: BodyShape): BodyShapeType {
       return BodyShapeType.MALE
     case BodyShape.FEMALE:
       return BodyShapeType.FEMALE
+    default:
+      return BodyShapeType.MALE
   }
 }
 

@@ -94,7 +94,7 @@ export function getCollectionType(collection: Collection): CollectionType {
 
 export function getCollectionSymbol(collection: Collection) {
   const vowelLessName = collection.name.replace(/a|e|i|o|u|\s/g, '')
-  return 'DCL-' + vowelLessName.toUpperCase()
+  return 'MTV-' + vowelLessName.toUpperCase()
 }
 
 export function toCollectionObject(collections: Collection[]) {

@@ -338,27 +338,27 @@ export default class ItemDetailPage extends React.PureComponent<Props, State> {
                 </div>
               </div>
 
-              {item.type === ItemType.WEARABLE && !isSmart(item) ? (
-                <div className="card">
-                  <div className="title-card-container">
-                    <div className="title">{t('item_detail_page.representations.title')}</div>
-                    <Button className="edit-button" inverted size="small" onClick={this.handleEditRepresentation}>
-                      {getMissingBodyShapeType(item) ? t('global.add') : t('global.edit')}
-                    </Button>
-                  </div>
-                  <div className="data">
-                    <div className="representations-container">
-                      {item.data.representations.map(representation => (
-                        <div key={representation.mainFile} className="representation">
-                          <img className="item-image" src={getThumbnailURL(item)} alt={item.name} />
-                          {representation.mainFile}
-                          {<ItemBadge item={item} bodyShape={representation.bodyShapes[0]} />}
-                        </div>
-                      ))}
-                    </div>
+              
+              <div className="card">
+                <div className="title-card-container">
+                  <div className="title">{t('item_detail_page.representations.title')}</div>
+                  <Button className="edit-button" inverted size="small" onClick={this.handleEditRepresentation}>
+                    {getMissingBodyShapeType(item) ? t('global.add') : t('global.edit')}
+                  </Button>
+                </div>
+                <div className="data">
+                  <div className="representations-container">
+                    {item.data.representations.map(representation => (
+                      <div key={representation.mainFile} className="representation">
+                        <img className="item-image" src={getThumbnailURL(item)} alt={item.name} />
+                        {representation.mainFile}
+                        {<ItemBadge item={item} bodyShape={representation.bodyShapes[0]} />}
+                      </div>
+                    ))}
                   </div>
                 </div>
-              ) : null}
+              </div>
+             
 
               {isSmart(item) && item.data.requiredPermissions?.length ? (
                 <div className="card">

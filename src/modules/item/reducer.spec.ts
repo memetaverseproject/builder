@@ -89,7 +89,7 @@ describe('when reducing the save collection success action', () => {
     beforeEach(() => {
       newCollectionAddress = '0x00192Fb10dF37c9FB26829eb2CC623cd1BF599E8'
       fstCollection = { ...fstCollection, urn: `urn:memetaverse:goerli:collections-v2:${newCollectionAddress}` } as Collection
-      getChainIdByNetworkMock.mockReturnValueOnce(ChainId.ETHEREUM_GOERLI as any).mockReturnValueOnce(ChainId.ETHEREUM_GOERLI as any)
+      getChainIdByNetworkMock.mockReturnValueOnce(ChainId.U2U_NEBULAS as any).mockReturnValueOnce(ChainId.U2U_NEBULAS as any)
       result = itemReducer(state, saveCollectionSuccess(fstCollection))
     })
 

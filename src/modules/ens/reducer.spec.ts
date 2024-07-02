@@ -167,7 +167,7 @@ describe('when handling set ens address actions', () => {
 
       action = fetchTransactionSuccess({
         actionType: SET_ENS_ADDRESS_SUCCESS,
-        payload: { ens, address, chainId: ChainId.ETHEREUM_SEPOLIA, hash: 'hash' }
+        payload: { ens, address, chainId: ChainId.U2U_NEBULAS, hash: 'hash' }
       } as Transaction)
     })
 
